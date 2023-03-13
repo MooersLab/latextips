@@ -46,15 +46,15 @@ Each of these reasons alone is sufficient to use it.
 You quickly learn to adapt to reading text in this format.
 It might be easier to comprehend because each complete thought is on a separate line.
 
-The *twautex* package in Emacs eases writing one sentence per line. 
+The [twautex](https://github.com/jeeger/twauctex) package in Emacs eases writing one sentence per line. 
 It is on GitHub.
 
 ## Use JabRef to manage a global.bib file
 
-JabRef.app is a free, open-source Java-based stand-a-lone application for managing and searching your Bibtex library file. 
+[JabRef.app](https://www.jabref.org/) is a free, open-source Java-based stand-a-lone application for managing and searching your Bibtex library file. 
 JabRep has tools for finding duplicate and damaged entries. 
 A JabRef plugin for web browsers is available.
-It will send the bibtex for an article to JabRef and download, relabel, and store in a folder of your choice the associated PDF when the current webpage is for an article on a PubMed, Arvix, or some journal website.
+It will send the BibTeX for an article to JabRef and download, relabel, and store in a folder of your choice the associated PDF when the current webpage is for an article on a PubMed, Arvix, or some journal website.
 
 I have JabRef configured to relabel the PDF with the citekey. 
 My citekey is `FirstAuthorLastNameYearTitle'. 
@@ -63,8 +63,9 @@ The title is in Camel case.
 You quickly get used to reading CamelCase. 
 
 When manually adding the BibTeX info to JabRef, I click the generate-key button in JabRef to autogenerate the citekey for an entry. 
-I store all of the bibtex entries in one global.bib file. 
-It has 7100 entries and is automatically backed up. 
+I store all of the BibTeX entries in one global.bib file. 
+It has 7100 entries and is automatically backed up.
+
 A similar automated PDF retrieval and relabeling system is available through John Kitchin's org-ref package for org-mode. 
 This functionality is not available in Emacs for LaTeX-mode, hence my workaround solution with JabRef.
 
@@ -82,17 +83,22 @@ If Emacs is overwhelming, use the GUI-driven equation editor in LyX or use the L
 
 I can compile to PDF at 370 part book with 1000 pages, a table of contents, bibliography, and index in about a minute on overleaf and several minutes on my local computer.
 
-## main.tex
+## main.tex for books
 
-Multipart documents require a main.tex file. 
+Books are best assembled from multiple documents, with one document per chapter.
+This modularization eases the shuffling of the order of the chapters.
+
+Multipart documents require a *main.tex* file. 
 I use it to source a 0AAAcontents.tex file (which has the input or include commands for importing the individual files for each chapter and appendix) and a mybookPreamble.tex that contains my preamble for books. 
 This modularization of the main.tex file greatly eased debugging.
 
 The path to the main.tex file has to be included on the top line of each component file on Overleaf: `%!TEX root = ../main.tex`. 
 The percent sign is the comment mark for LaTeX so its presence in the first column of the first line is counterintuitive.
+
 Similarly, four lines of code have to be at the end of each tex file for compiling by Emacs.
 The code below works with the default LaTeX mode. 
-Alter the code when working with Auctex.
+Alter the code when working with Auctex in Emacs.
+Some other editors like TextMate require similar metadata to find the master main.tex file.
 
 ```latex
 %%% Local Variables: ***
@@ -134,27 +140,34 @@ This template could be made into a yasnippet snippet in Emacs.
 
 ## Reference all labels
 
+Labels are anchors for hyperlinks in the compiled PDF.
+They are often added to figures, tables, equations, and code listings and then they are referred to from the text.
 When reusing code, it is too easy to propagate the same label. 
 Each label must be unique, and each must be referenced.
 
 ## Add index keys as you write
 
+The index entries are hyperlinked to the index keys in the final PDF.
 It is all too easy to forget to add index keys.
-However, they ease finding information in the document as you assemble it.
+However, they ease finding information in the document.
+It is best to add the index keys as you assemble the document so that you can use them as you work on the project.
+The keys serve as anchors to hyperlinks to them in the index.
+
 The search function is Acrobat Reader can lead too many hits and is poor substitute for using index keys.
 
 
 ## Use keybindings
 
 Overleaf has standard CUA, Vim, and Emacs keybindings available. 
-You select via the menau in the upper left one set to use on a per project basis. 
-Select one set and master them.
+You set the keybinding via the menu in the upper lefthand corner of the Overleaf webpage.
+The keybindings can be selected on a per project basis. 
 
 ## Image format
 
-Use PNG files or PDFs. 
+Use PNG files or PDFs for image files. 
 One drawback to Overleaf is that you cannot use postscript, EPS, or TIFF files. 
-You can use PDFs, but you will not get a preview of the image file, unlike the case with PNG files. 
+You can take a snapshot of images in these formats and save them as PNG files for uploading on Overleaf.
+You can use PDFs, but you will not get a preview of the image file in Overleaf, unlike the case with PNG files. 
 You have to wait for the document to be compiled by Overleaf to see an included image from a PDF.
 
 ## Indices
@@ -162,23 +175,26 @@ You have to wait for the document to be compiled by Overleaf to see an included 
 LaTeX will autogenerate the table of contents, indices, bibliographies, glossaries, acronym lists, lists of figures, lists of tables, list of computer code listings, and lists of equations. 
 The last four lists require the use of captions that appear in the lists. 
 Captions require the use of a subset of environments that are known as floats. 
-I defined a code environment that encloses the minted environment for code listings and an eqc environment that does likewise for equations.
+I defined a *code* environment that encloses the minted environment for code listings and an *eqc* environment that does likewise for equations.
 These are custom float environments that allow the use of captions. 
 
 There may be computer RAM limits that block the generation of all of these indices. 
 You may have to drop several of them.
-The 
 
 ## Epigraphs
 
-The epigraph package supports the insertion of epigraphs, which I store in a epigraphs.tex file. 
+The epigraph package supports the insertion of epigraphs below the chapter title in a book.
+I store quotes in a master epigraphs.tex file in one project. 
+I copy this file to other projects.
+
+It takes a lot of time to gather quotes.
 I gather quotes over the years and call upon them when needed. 
 LaTeX automatically handles the formatting.
 
 ## Tables
 
-Tables are a great strength of org-mode because they are trivial to assemble and they do computations.
-In contrast, tables can be a pain to assemble in Emacs unless you use a snippet for table.
+Tables are a great strength of org-mode because they are trivial to assemble, and they even can do by row and by column computations like a spreadsheet.
+In contrast, tables can be a pain to assemble in Emacs, unless you use a snippet for a table with a fixed number of rows and columns.
 
 You can spend a lot of time configuring tables. 
 There are web-tools that ease generating a template for a table. 
@@ -200,3 +216,10 @@ I hide the icons that typify a beamer slideshow.
 Most people think that I assembled my slides in PowerPoint.
 
 You can also assemble a poster in LaTeX by using one giant beamer slide. 
+
+## Conclusion
+
+LaTeX meets all of my writing needs.
+I retain MS Word to collaborate when MS Word only collaborators.
+Furthermore, LaTeX supports my pursuit of the FAIR principles. 
+
