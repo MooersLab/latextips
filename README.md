@@ -21,7 +21,9 @@ Inspect the output.aux for leads to the source of the errors when the error mess
 
 ## Use version control 
 
-Each Overleaf project has its own git repository. You can git clone your project to your local computer. Take care not to get the two versions out of synch while writing or editing.
+Each Overleaf project has its own git repository. 
+You can `git clone` your Overleaf project to your local computer. 
+Take care not to get the two versions out of synch while writing or editing.
 
 ## Use bookmark bar 
 
@@ -29,12 +31,13 @@ The URL of the Overleaf writing project can be added to the browser toolbar for 
 
 ## Start with simple projects
 
-There is not that much in the way of coding to learn for writing the heart of a LaTeX document between the begin document and end document statement. The trouble comes when you extend LaTeX with packages.
+There is not that much in the way of coding to learn for writing the heart of a LaTeX document between the begin document and end document statement. 
+The trouble comes when you extend LaTeX with packages.
 
 ## Start with a simple manuscript format
 
 Avoid the complex template documents for journal articles that you can find on the Overleaf website.
-You can submit a plain double-spaced manuscript document on the first submission for any journal. 
+You can submit a plain [double-spaced manuscript document](https://github.com/MooersLab/manuscriptInLaTeX) on the first submission for any journal. 
 Do not waste time on complex configurations for the first submission. 
 You may have to send the manuscript to a different journal.
 
@@ -72,12 +75,13 @@ This functionality is not available in Emacs for LaTeX-mode, hence my workaround
 ## Use Emacs for writing math equations
 
 Overleaf does not support code snippets. 
-Emacs's yasnippet package supports eases creation of snippets. 
+Emacs's [yasnippet](https://github.com/joaotavora/yasnippet) package supports eases creation of snippets. 
 Emacs has great support for writing in LaTeX. 
-Snippets and especially the auto-snippet package can ease the writing of equations. 
+Snippets and especially the [LaTeX-auto-acitvating-snippets package](https://github.com/tecosaur/LaTeX-auto-activating-snippets) can ease the writing of equations. 
+The Swedish mathematician Mark Olson provides an [awesome demo](https://www.youtube.com/watch?v=5cGsiRtBK9I) of these features in a short video.
 
 Overleaf is not the best environment for writing a lot of equations. 
-If Emacs is overwhelming, use the GUI-driven equation editor in LyX or use the LaTeXiT.app to typeset the math equations.
+If snippets in Emacs is too overwhelming, use the GUI-driven equation editor in [LyX](https://www.lyx.org/) or use the [LaTeXiT.app](https://www.chachatelier.fr/latexit/) to typeset the math equations and paste the assembled code into your LaTeX document.
 
 ## Multipart documents
 
