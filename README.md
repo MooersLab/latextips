@@ -94,9 +94,28 @@ If snippets in Emacs is too overwhelming, use the GUI-driven equation editor in 
 ## Know your math enivornments
 
 One of the motivations for the development of TeX (which evolved into LaTeX) was to provided better support for typesetting math equations.
-There are large number of [equation environments](https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics#Other_environments).
+There are a large number of [equation environments](https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics#Other_environments).
 You should study them from time to time.
-The LaTeX wikibook is a good [resource](https://en.wikibooks.org/wiki/LaTeX).
+The LaTeX Wikibook is a good [resource](https://en.wikibooks.org/wiki/LaTeX).
+Eventually, you should read these two books when time permits.
+
+```latex
+@Book{Gratzer2013MathIntoLaTeXASimpleGuideToTypesettingMathUsingAMSLaTeX,
+	title = {Math into LaTeX: A Simple Guide to Typesetting Math Using AMS-LaTeX},
+	publisher = {Springer Science \& Business Media},
+	year = {2013},
+	author = {Gr{\"a}tzer, George}
+}
+
+@Book{Graetzer2016MoreMathIntoLaTeXFifthEd,
+	author = {Gr{\"a}tzer, George},
+	publisher = {Springer},
+	title = {More math into \LaTeX},
+	year = {2016},
+	edition = {Fifth Edition},
+	booktitle = {More Math Into \LaTeX}
+}
+```
 
 
 ## Multipart documents
