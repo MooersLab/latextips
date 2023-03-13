@@ -5,12 +5,20 @@ LaTeX is not for most people.
 You have to be able to debug the source file, and you have to be self-reliant.
 You need some rudimentary programming skills and some patience.
 
+## Why LaTeX?
+
+- The tex files are plain text and easy to put under version control.
+- Large tex and the resulting PDF files are easy to scroll quickly.
+- The support for math type-setting is excellent.
+- The support for generating bibliographies, indices, and list is very strong.
+
+
 ## Start with Overleaf 
 
 [Overleaf.com](https://www.overleaf.com/) provides free accounts. 
 You only need the professional account if you are doing collaborative writing. 
 
-The documentation about LaTeX on the Overleaf website is excellent. 
+The [documentation about LaTeX](https://www.overleaf.com/learn) on the Overleaf website is excellent. 
 It is the first place you should go to when starting out.
 
 Your writing project will be accessible from your multiple devices. 
@@ -72,7 +80,7 @@ It has 7100 entries and is automatically backed up.
 A similar automated PDF retrieval and relabeling system is available through John Kitchin's org-ref package for org-mode. 
 This functionality is not available in Emacs for LaTeX-mode, hence my workaround solution with JabRef.
 
-## Use Emacs for writing math equations
+## Writing math equations
 
 Overleaf does not support code snippets. 
 Emacs's [yasnippet](https://github.com/joaotavora/yasnippet) package supports eases creation of snippets. 
@@ -82,6 +90,14 @@ The Swedish mathematician Mark Olson provides an [awesome demo](https://www.yout
 
 Overleaf is not the best environment for writing a lot of equations. 
 If snippets in Emacs is too overwhelming, use the GUI-driven equation editor in [LyX](https://www.lyx.org/) or use the [LaTeXiT.app](https://www.chachatelier.fr/latexit/) to typeset the math equations and paste the assembled code into your LaTeX document.
+
+## Know your math enivornments
+
+One of the motivations for the development of TeX (which evolved into LaTeX) was to provided better support for typesetting math equations.
+There are large number of [equation environments](https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics#Other_environments).
+You should study them from time to time.
+The LaTeX wikibook is a good [resource](https://en.wikibooks.org/wiki/LaTeX).
+
 
 ## Multipart documents
 
@@ -221,7 +237,7 @@ Most people think that I assembled my slides in PowerPoint.
 
 You can also assemble a poster in LaTeX by using one giant beamer slide. 
 
-## Conclusion
+## Conclusions
 
 LaTeX meets all of my writing needs.
 I retain MS Word to collaborate when MS Word only collaborators.
