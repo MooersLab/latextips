@@ -173,7 +173,47 @@ A useful template for a book chapter would be as follows:
 %%% End: ***
 ```
 
-This template could be made into a yasnippet snippet in Emacs.
+This template could be made into a yasnippet snippet in Emacs as follows.
+It includes in a comment a reminder of some basic Emacs commands.
+
+```latex
+# -*- mode: snippet -*-
+# name: A generic chapter
+# group: Template document
+# key: ch
+# --
+%!TEX root = ../main.tex
+
+\chapter{${1:LBSF report}}
+\chaptermark{$1}
+\index{$1}
+
+% Emacs shortcuts in tex-mode
+% C-c c-a to render as PDF and open in Skim.app (does not work with atomic-chrome)
+% C-c w to display the word count (does not work with atomic-chrome)
+% C-c C-w to write out to different filename
+% C-x C-s to save.
+% C-1 to close current buffer.
+% C-c y i to open a pop-up menu for selecting a snippet.
+
+
+\section*{Introduction}
+$2
+
+\section{Topic 1}
+\index{Topic 1}
+$3
+
+
+\section{Summary}
+
+
+%%% Local Variables: ***
+%%% mode:latex ***
+%%% tex-main-file: "../main.tex"  ***
+%%% End: ***
+
+```
 
 
 
