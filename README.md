@@ -179,6 +179,7 @@ It includes in a comment a reminder of some basic Emacs commands.
 ```latex
 # -*- mode: snippet -*-
 # name: A generic chapter
+# contributor: Blaine Mooers bmooers1@gmail.com
 # group: Template document
 # key: ch
 # --
