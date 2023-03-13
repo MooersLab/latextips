@@ -1,5 +1,7 @@
 # Tips for greater productivity with LaTeX
 
+This is a summary of advice gleaned from a decade of using LaTeX. 
+
 ## Start with Overleaf 
 
 Overleaf.com provides free accounts. You only need the professional account if you are doing collaborative writing. The documentation about LaTeX on the Overleaf website is excellent. Your writing project will be accessible from your multiple devices. The built-in support for debugging is excellent. Overleaf compiles your document to PDF very quickly and painlessly.
