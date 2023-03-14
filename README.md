@@ -117,6 +117,33 @@ Eventually, you should read these two books when time permits.
 }
 ```
 
+## How to tell with URLs
+
+Web addresses or URLs are frequently used to refer to resources on the World Wide Web.
+URLs are useful to display because they can evolve.
+Knowledge of an older URL can aid the finding of the current URL.
+However, LaTeX does not know hot to line wrap URL so they project into the right margin.
+
+To address this problem, I put URLs in footnotes at the bottom of the page where they are out of the way.
+I use the the command `\footnote{\url{ }}`.
+I have put this in a yasnippet called *furl*.
+
+```elisp
+# contributor: Blaine Mooers bmooers1@gmail.com
+# key: furl
+# group: urls
+# name: Send a url to a footnote.
+# --
+\footnote{\url{${1:http}}}. 
+$0
+```
+
+I copy the URL of interest to the clipboard.
+Then, at the end of sentence, I enter *furl* and Control-o and the code appears.
+I paste the URL on the placeholder and then hit tab. 
+The cursor moves out of the braces and over the period to the start of the next sentence on a new line.
+LaTeX automatically handles the generation of the footnote number and its placement in the footer of the page.
+
 
 ## Multipart documents
 
