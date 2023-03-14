@@ -117,12 +117,12 @@ Eventually, you should read these two books when time permits.
 }
 ```
 
-## How to tell with URLs
+## How to deal with URLs the bleed in the right margin
 
 Web addresses or URLs are frequently used to refer to resources on the World Wide Web.
 URLs are useful to display because they can evolve.
-Knowledge of an older URL can aid the finding of the current URL.
-However, LaTeX does not know hot to line wrap URL so they project into the right margin.
+Knowledge of an outdated URL can aid the discovery of the current URL.
+However, LaTeX does not know how to line wrap URL so they project into the right margin.
 
 To address this problem, I put URLs in footnotes at the bottom of the page where they are out of the way.
 I use the the command `\footnote{\url{ }}`.
@@ -139,7 +139,8 @@ $0
 ```
 
 I copy the URL of interest to the clipboard.
-Then, at the end of sentence, I enter *furl* and Control-o and the code appears.
+Then, at the end of the sentence, I enter *furl* and Control-o.
+Then the in the snippet appears.
 I paste the URL on the placeholder and then hit tab. 
 The cursor moves out of the braces and over the period to the start of the next sentence on a new line.
 LaTeX automatically handles the generation of the footnote number and its placement in the footer of the page.
@@ -147,15 +148,15 @@ LaTeX automatically handles the generation of the footnote number and its placem
 
 ## Multipart documents
 
-I can compile to PDF at 370 part book with 1000 pages, a table of contents, bibliography, and index in about a minute on overleaf and several minutes on my local computer.
+I can compile to PDF at a book with 1000 pages assemble from 400 individual documents, a table of contents, bibliography, and index in about a minute on Overleaf.com and several minutes on my local computer.
 
 ## main.tex for books
 
 Books are best assembled from multiple documents, with one document per chapter.
-This modularization eases the shuffling of the order of the chapters.
+This modularization eases the shuffling of the order of the chapters and the addition of new chapters.
 
 Multipart documents require a *main.tex* file. 
-I use it to source a 0AAAcontents.tex file (which has the input or include commands for importing the individual files for each chapter and appendix) and a mybookPreamble.tex that contains my preamble for books. 
+I use it to source a 0AAAcontents.tex file (which has the *input* or *include* commands for importing the individual files for each chapter and appendix) and a mybookPreamble.tex that contains my preamble for books. 
 This modularization of the main.tex file greatly eased debugging.
 
 The path to the main.tex file has to be included on the top line of each component file on Overleaf: `%!TEX root = ../main.tex`. 
