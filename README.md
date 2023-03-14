@@ -53,31 +53,35 @@ You may have to send the manuscript to a different journal.
 
 This style of writing eases version control with git (Version control with git is impossible with Word documents). 
 This format of writing also eases the shuffling of sentences during rewriting. 
-Each of these reasons alone is sufficient to use it. 
-You quickly learn to adapt to reading text in this format.
-It might be easier to comprehend because each complete thought is on a separate line.
+Each of these two reasons alone is sufficient to use this unconventional format of writing. 
+You quickly adapt to reading text in this format.
+This format might be easier to comprehend because each complete thought is on a separate line.
 
 The [twautex](https://github.com/jeeger/twauctex) package in Emacs eases writing one sentence per line. 
-It is on GitHub.
+It is not in MELPA yet.
+You have to install it manually.
 
-## Use JabRef to manage a global.bib file
+## Consider using JabRef to manage a global.bib file
 
+Although versious text edtiors have packages for managing BibTeX libarary flles, I am using JabRef.
 [JabRef.app](https://www.jabref.org/) is a free, open-source Java-based stand-a-lone application for managing and searching your Bibtex library file. 
 JabRep has tools for finding duplicate and damaged entries. 
 A JabRef plugin for web browsers is available.
 It will send the BibTeX for an article to JabRef and download, relabel, and store in a folder of your choice the associated PDF when the current webpage is for an article on a PubMed, Arvix, or some journal website.
 
 I have JabRef configured to relabel the PDF with the citekey. 
-My citekey is `FirstAuthorLastNameYearTitle'. 
+My citekey format is `FirstAuthorLastNameYearTitle'. 
 The citekey has no dashes or underscores or whitespaces. 
-The title is in Camel case.  
+The latter are a pain to work with on Unix-like systems.
+The title is in Camel case or Pascal case.  
 You quickly get used to reading CamelCase. 
 
 When manually adding the BibTeX info to JabRef, I click the generate-key button in JabRef to autogenerate the citekey for an entry. 
 I store all of the BibTeX entries in one global.bib file. 
-It has 7100 entries and is automatically backed up.
+It has over 7100 entries and is automatically backed up.
+Its size is not an issue in JabRef, on Overleaf, or in Emacs.
 
-A similar automated PDF retrieval and relabeling system is available through John Kitchin's org-ref package for org-mode. 
+A similar automated PDF retrieval and relabeling system is available through Professor John Kitchin's [org-ref](https://github.com/jkitchin/org-ref) package for org-mode in Emacs. 
 This functionality is not available in Emacs for LaTeX-mode, hence my workaround solution with JabRef.
 
 ## Writing math equations
