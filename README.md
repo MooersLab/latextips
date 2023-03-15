@@ -79,9 +79,9 @@ You have to install it manually.
 
 ## Global.bib: skip the synching
 
-You can synch your global.bin file to your Overelaf writing project by storing it on Google Drive or DropBox.
+You can synch your global.bin file to your Overleaf writing project by storing it on Google Drive or DropBox.
 I spent a lot of time on this and found that it was too complicated.
-One weakness is the need for continous synching with DropBox or Google Drive.
+One weakness is the need for continuous synching with Dropbox or Google Drive.
 I find it easier to upload to the Overleaf project a new version of the global.bib file as needed.
 
 
@@ -246,10 +246,10 @@ A useful template for a book chapter follows:
 %%% End: ***
 ```
 
-This template could be made into a yasnippet snippet in Emacs as follows.
+This template is made into a yasnippet snippet for Emacs as shown below.
 The $1 tab trigger is mirrored so the whatever you enter at the first site is propagate to the other sites.
 This saves time.
-It includes in a comment some basic Emacs commands that I use when in LaTeX mode.
+The snippet includes in a comment some basic Emacs commands that I use when in LaTeX mode.
 
 ```latex
 # -*- mode: snippet -*-
@@ -271,6 +271,8 @@ It includes in a comment some basic Emacs commands that I use when in LaTeX mode
 % C-x C-s to save.
 % C-1 to close current buffer.
 % C-c y i to open a pop-up menu for selecting a snippet.
+% C-c y for a hydra for yasnippets (Hydras are very cool! They save time. Learn about them.)
+% Fn F1 to invoke a hdyra for magit: mc for commit and mp for push. Yes, use git inside an Emacs buffer has opened a file under git version control.
 
 
 \section*{Introduction}
@@ -291,6 +293,55 @@ $3
 
 ```
 
+Magit is the Emacs package that enables running git from inside Emacs.
+The magit hydra came from this emacs.stackexchange [post](https://emacs.stackexchange.com/questions/21597/using-magit-for-the-most-basic-add-commit-push).
+I have pasted it below for completeness.
+Hydras display a temporary menu to guide your selection of commands.
+I regret not learning about them sooner.
+
+
+```elisp
+(defhydra yt-hydra/help (:color blue :hint nil)
+  "
+_mp_ magit-push #_mc_ magit-commit #_md_ magit diff #_mla_ magit diff #_mla_ magit status
+"
+  ;;Magit part
+  ("mp" magit-push)
+  ("mc" magit-commit)
+  ("md" magit-diff)
+  ("mla" magit-log-all)
+  ("ms" magit-status)
+  )
+(global-set-key (kbd "<f1>") 'yt-hydra/help/body)
+
+```
+
+The hydra for yasnippets is below:
+
+```elisp
+;; A cool hydra for finding snippets at point. Invoke wit C-c y.
+(use-package hydra
+  :defer 2
+  :bind ("C-c y" . hydra-yasnippet/body))
+
+(defhydra hydra-yasnippet (:color blue)
+  "
+  ^
+  ^YASnippet^          ^Do^
+  ^─────────^──────────^──^────────
+  _q_ quit             _i_ insert
+  ^^                   _m_ mode
+  ^^                   _n_ new
+  ^^                   ^^
+  "
+  ("q" nil)
+  ("i" yas-insert-snippet)
+  ("m" yas-minor-mode)
+  ("n" yas-new-snippet))
+```
+
+My current Emacs configuration file can be downloaded from [here](https://github.com/MooersLab/emacs30venturatreesitterconfig).
+Older variants can be found elsewhere in my collection of GitHub repos.
 
 
 ## Reference all labels
