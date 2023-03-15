@@ -296,9 +296,11 @@ $3
 ## Reference all labels
 
 Labels are anchors for hyperlinks in the compiled PDF.
-They are often added to figures, tables, equations, and code listings and then they are referred to from the text.
-When reusing code, it is too easy to propagate the same label.
+They are often added to figures, tables, equations, and code listings, and then they are referred to from the text.
+When reusing code, it is too easy to propagate the same label and to fail to add the reference to the label.
 Each label must be unique, and each must be referenced.
+It is best to think of labels and references as being inseparable pairs.
+Otherwise, you will have to spend a lot of time dealing with labels that lack references during debugging.
 
 ## Add index keys as you write
 
