@@ -185,17 +185,26 @@ LaTeX automatically handles the generation of the footnote number and its placem
 I can compile to PDF at a book with 1000 pages assemble from 400 individual documents, a table of contents, bibliography, and index in about a minute on Overleaf.com.
 The same operation takes several minutes on my local computer.
 
-## main.tex for books
+### main.tex for books
 
 Books are best assembled from multiple documents, with one document per chapter.
 This modularization eases the shuffling of the order of the chapters and the addition of new chapters.
+It is super easy to shift lines of text up and down in Emacs without using the mouse to make selections.
 
-Multipart documents require a *main.tex* file.
-I use it to source a 0AAAcontents.tex file (which has the *input* or *include* commands for importing the individual files for each chapter and appendix) and a mybookPreamble.tex that contains my preamble for books.
-This modularization of the main.tex file greatly eased debugging.
+Multipart documents require a *main.tex* file that I store at the top level of the project directory.
+I use it to source a *0AAAcontents.tex* file (which has the *input* or *include* commands for importing the individual files for each chapter and appendix) and a mybookPreamble.tex that contains my preamble for books.
+This modularization of the main.tex file has greatly eased debugging.
 
-The path to the main.tex file has to be included on the top line of each component file on Overleaf: `%!TEX root = ../main.tex`.
-The percent sign is the comment mark for LaTeX, so its presence in the first column of the first line is counterintuitive.
+I frequently edit the *0AAAcontents.tex* file as I add chapters and appendices.
+I named this file *0AAAcontents.tex* so that it appears at the top of the list of files in a `./Contents` folder where I store the chapter files and all other input files for the book.
+I store the figures, code listings, and appendices in subfolders of `./Contents` to reduce the clutter.
+I start the filename of chapters with `Ch` to distinguish them from other types of files.
+I do not include chapter numbers in the filenames of chapter because their absolute position shifts over time.
+I use the order of listing of the include commands in the *0AAAcontents.tex* file automatically  handle the numbering of the chapters.
+
+
+The path to the main.tex file has to be included on the top line of each component file on Overleaf: `%!TEX root = ../main.tex` For Chapter files and `%!TEX root =  ../../main.tex` for the appendix files that are stored in the folder `./Contents/appendices`.
+The percent sign is the comment mark for LaTeX, so its presence in the first column of the first line is counter-intuitive.
 
 Similarly, four lines of code have to be at the end of each tex file for compiling by Emacs.
 The code below works with the default LaTeX mode.
