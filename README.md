@@ -72,7 +72,7 @@ The URL of the Overleaf writing project can be added to the browser toolbar for 
 
 ## Start with simple projects
 
-There is not that much in the way of coding to learn for writing the heart of a LaTeX document between the `\begin{document}` and `\end{document} tags.
+There is not that much in the way of coding to learn for writing the heart of a LaTeX document between the `\begin{document}` and `\end{document}` tags.
 The trouble comes when you extend LaTeX by importing packages via the documents preamble.
 
 ## Start with a simple manuscript format
