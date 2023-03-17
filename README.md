@@ -7,22 +7,27 @@ You need some rudimentary programming skills and some patience.
 
 ## Why learn LaTeX?
 
+- It is free.
+- It has been around in its present form for 35 years, so it is likely to be around for another 35 years according to the [Lindy effect](https://wiki2.org/en/Lindy_effect).
 - The tex files are plain text and easy to put under version control.
 - The tex files are tiny compared to a word processing document containing the same information.
 - Long tex files and the resulting PDF files are easy to scroll quickly; this is not the case for word processing documents.
 - The support for math type-setting is among the best.
 - The support for generating automatically tables of contents, bibliographies, indices, glossaries, and lists of figures, tables, code, and equations is very strong.
+- You have exquisite and precise control over the appearance of the output, largely via a vast library of packages. It is likely that what you want to do has been done before via a library that someone else developed.
+- The bulk of your prose does not require much in the way of LaTeX coding. The LaTeX is out of your way most of the time.
+- After you configure that preamble of the tex file to generate the features that you want in a particular kind of document, your work is done. You can reuse the preamble for the next several decades with only minor modifications as packages wax and wane.
 
 ## Why not the alternatives to LaTeX
 
 - [Markdown](https://wiki2.org/en/Markdown) (and all of its variants: even Rmarkdown and bookdown) are great for very simple documents. The rendered PDFs are beautiful. It is a great starter language for working with markup documents. However, it does not support automatic generation of indices.
 - [ReStructuredTexT](https://wiki2.org/en/ReStructuredText) may be the next step-up in terms of sophistication, but it was designed to meet the needs of Python developers to document their code. It does a good job of meeting that need, but it is also quite limited as a result.
 - [Asciidoc](https://wiki2.org/en/AsciiDoc) is a step closer to LaTeX. However, it imports rendered PNG files of equations that look horrible. It, too, fails to generate indices. 
-- [Org-mode](https://orgmode.org/) is a very powerful markup language with added features for time and knowledge management. You can work in org-mode all day. It is a very complete work environment. However, org files are translated to LaTeX. Org recognizes most LaTeX markup. You have to learn LaTeX to get the most out of document generation with org-mode. Here are some templates for a generic [manuscript]() and a [writing log]().
-- HTML is obviously great for making web-pages. You can use it to generate document too. Knowledge of HTML is useful when you run into the limitation of GitHub markdown.
+- [Org-mode](https://orgmode.org/) is a very powerful markup language with added features for time and knowledge management. You can work in org-mode all day. It is a very complete work environment. However, org files are translated to LaTeX. Org recognizes most LaTeX markup. You have to learn LaTeX to get the most out of document generation with org-mode. Here are some templates for a generic [manuscript](https://github.com/MooersLab/manuscriptInOrg) and a [writing log](https://github.com/MooersLab/writingLogTemplateInOrg).
+- HTML is obviously great for making web-pages. You can use it to generate documents too. Knowledge of HTML is useful when you run into the limitations of GitHub markdown.
 
 I have experience with all of the above.
-I still use org-mode and HTML everyday, markdown frequently, and ReStructuredTexT once a year.
+I use org-mode, markdown, and HTML everyday and ReStructuredTexT once a year.
 
 ## Start with Overleaf
 
@@ -437,6 +442,6 @@ You can also assemble a poster in LaTeX by using one giant beamer slide.
 ## Conclusions
 
 LaTeX meets all of my writing needs.
-I retain word processors on my computer to collaborate with senior scientists who do not know LaTeX.
 Furthermore, LaTeX supports my pursuit of the [FAIR](https://www.go-fair.org/fair-principles/) principles.
+I retain word processors on my computer to collaborate with colleagues who do not know LaTeX.
 
