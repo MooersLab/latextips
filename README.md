@@ -7,7 +7,7 @@ You need some rudimentary programming skills and some patience.
 
 ## Why learn LaTeX?
 
-- It is free.
+- LaTeX is available for free. It is painless to install with a package manager.
 - It has been around in its present form for 35 years, so it is likely to be around for another 35 years according to the [Lindy effect](https://wiki2.org/en/Lindy_effect).
 - The tex files are plain text and easy to put under version control.
 - The tex files are tiny compared to a word processing document containing the same information.
@@ -15,8 +15,10 @@ You need some rudimentary programming skills and some patience.
 - The support for math type-setting is among the best.
 - The support for generating automatically tables of contents, bibliographies, indices, glossaries, and lists of figures, tables, code, and equations is very strong.
 - You have exquisite and precise control over the appearance of the output, largely via a vast library of packages. It is likely that what you want to do has been done before via a library that someone else developed.
-- The bulk of your prose does not require much in the way of LaTeX coding. The LaTeX is out of your way most of the time.
+- The bulk of your prose does not require much in the way of LaTeX coding. The LaTeX markup is out of your way most of the time.
 - After you configure that preamble of the tex file to generate the features that you want in a particular kind of document, your work is done. You can reuse the preamble for the next several decades with only minor modifications as packages wax and wane.
+- You can also reuse LaTeX code in the form of code snippets. Snippets can enhance your productivity in ways that are still not possible in word processing documents thanks to tab triggers and mirrored tab stops.
+- Word processing documents were designed for writing business letters and not much less. For everything else, LaTeX is better. LaTeX is also good for business letter. Most academics use word processors for historic reasons.
 
 ## Why not the alternatives to LaTeX
 
