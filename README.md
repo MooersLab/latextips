@@ -22,14 +22,15 @@ You need some rudimentary programming skills and some patience.
 
 ## Why not the alternatives to LaTeX
 
-- [Markdown](https://wiki2.org/en/Markdown) (and all of its variants: even Rmarkdown and bookdown) are great for very simple documents. The rendered PDFs are beautiful. It is a great starter language for working with markup documents. However, it does not support automatic generation of indices.
+- [Plain text](https://wiki2.org/en/Plain_text) Why not? It's simple. It is the place to start when breaking free from the grip of word processors.
+- [Markdown](https://wiki2.org/en/Markdown) (and all of its variants: even Rmarkdown and bookdown) are great for simple documents. The rendered PDFs are beautiful. It is a great starter language for working with markup documents. However, it does not support automatic generation of indices.
 - [ReStructuredTexT](https://wiki2.org/en/ReStructuredText) may be the next step-up in terms of sophistication, but it was designed to meet the needs of Python developers to document their code. It does a good job of meeting that need, but it is also quite limited as a result.
 - [Asciidoc](https://wiki2.org/en/AsciiDoc) is a step closer to LaTeX. However, it imports rendered PNG files of equations that look horrible. It, too, fails to generate indices. 
-- [Org-mode](https://orgmode.org/) is a very powerful markup language with added features for time and knowledge management. You can work in org-mode all day. It is a very complete work environment. However, org files are translated to LaTeX. Org recognizes most LaTeX markup. You have to learn LaTeX to get the most out of document generation with org-mode. Here are some templates for a generic [manuscript](https://github.com/MooersLab/manuscriptInOrg) and a [writing log](https://github.com/MooersLab/writingLogTemplateInOrg).
+- [Org-mode](https://orgmode.org/) is a very powerful markup language with added features for time and knowledge management. You can work in org-mode all day. It is a very complete work environment. However, org files are translated to LaTeX upon export to PDF. Org recognizes most LaTeX markup. You have to learn LaTeX to get the most out of document generation with org-mode. Here are some templates for a generic [manuscript](https://github.com/MooersLab/manuscriptInOrg) and a [writing log](https://github.com/MooersLab/writingLogTemplateInOrg).
 - HTML is obviously great for making web-pages. You can use it to generate documents too. Knowledge of HTML is useful when you run into the limitations of GitHub markdown.
 
 I have experience with all of the above.
-I use org-mode, markdown, and HTML everyday and ReStructuredTexT once a year.
+I use org-mode, markdown, plain text, and HTML everyday and ReStructuredTexT once a year.
 
 ## Start with Overleaf
 
