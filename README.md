@@ -23,14 +23,14 @@ You need some rudimentary programming skills and some patience.
 ## Why not the alternatives to LaTeX
 
 - [Plain text](https://wiki2.org/en/Plain_text) Why not? It's simple. It is the place to start when breaking free from the grip of word processors.
-- [Markdown](https://wiki2.org/en/Markdown) (and all of its variants: even Rmarkdown and bookdown) are great for simple documents. The rendered PDFs are beautiful. It is a great starter language for working with markup documents. However, it does not support automatic generation of indices.
+- [Markdown](https://wiki2.org/en/Markdown) (and all of its variants: even R Markdown and [bookdown](https://bookdown.org/)) are great for simple documents. The rendered PDFs are beautiful. It is a great starter language for working with markup documents. However, it does not support the automatic generation of indices.
 - [ReStructuredTexT](https://wiki2.org/en/ReStructuredText) may be the next step-up in terms of sophistication, but it was designed to meet the needs of Python developers to document their code. It does a good job of meeting that need, but it is also quite limited as a result.
-- [Asciidoc](https://wiki2.org/en/AsciiDoc) is a step closer to LaTeX. However, it imports rendered PNG files of equations that look horrible. It, too, fails to generate indices. 
-- [Org-mode](https://orgmode.org/) is a very powerful markup language with added features for time and knowledge management. You can work in org-mode all day. It is a very complete work environment. However, org files are translated to LaTeX upon export to PDF. Org recognizes most LaTeX markup. You have to learn LaTeX to get the most out of document generation with org-mode. Here are some templates for a generic [manuscript](https://github.com/MooersLab/manuscriptInOrg) and a [writing log](https://github.com/MooersLab/writingLogTemplateInOrg).
-- HTML is obviously great for making web-pages. You can use it to generate documents too. Knowledge of HTML is useful when you run into the limitations of GitHub markdown.
+- [Asciidoc](https://wiki2.org/en/AsciiDoc) is a step closer to LaTeX. However, it imports rendered PNG files of equations that look horrible. It, too, fails to generate indices. You can generate an index if you export the document to [DocBook](https://docbook.org/), which uses XML.
+- [Org-mode](https://orgmode.org/) is a very powerful markup language with added features for time and knowledge management. You can work in org-mode all day. It is a very complete work environment. However, org files are translated to LaTeX upon export to PDF. Org recognizes most LaTeX markup. You still have to learn some LaTeX to get the most out of document generation with org-mode. Here are some templates for a [generic manuscript](https://github.com/MooersLab/manuscriptInOrg) and a [writing log](https://github.com/MooersLab/writingLogTemplateInOrg) to keep track of your progress and plans for your writing project.
+- HTML is obviously great for making web-pages. You can use it to generate documents too. Knowledge of HTML is useful when you run into the limitations of GitHub Markdown.
 
 I have experience with all of the above.
-I use org-mode, markdown, plain text, and HTML everyday and ReStructuredTexT once a year.
+I use org-mode, markdown, plain text, and HTML every day and ReStructuredTexT once a year.
 
 ## Start with Overleaf
 
@@ -50,7 +50,7 @@ Each of your writing project will be accessible from your multiple devices.
 Each writing project is lists in projects page.
 Each writing project as a unique URL that you can use to directly access the writing project from an index.html file or an org file.
 
-Overleaf's built-in support for debugging is excellent.
+Overleaf's built-in support for debugging is exquisite.
 Its support for debugging was one of the winning features for me.
 
 Overleaf compiles your document to PDF very quickly and painlessly.
@@ -62,7 +62,7 @@ Each Overleaf project has its own git repository.
 You can `git clone` your Overleaf project to your local computer.
 Take care not to get the two versions out of synch while writing or editing.
 
-You can also git clone your project from Overleaf to GitHub but GitHub will charge you for this privilege.
+You can also `git clone` your project from Overleaf to GitHub, but GitHub will charge you for this privilege.
 If you have an academic account that is private, you can clone it from your computer to that account.
 
 
@@ -72,15 +72,16 @@ The URL of the Overleaf writing project can be added to the browser toolbar for 
 
 ## Start with simple projects
 
-There is not that much in the way of coding to learn for writing the heart of a LaTeX document between the begin document and end document statement.
-The trouble comes when you extend LaTeX with packages.
+There is not that much in the way of coding to learn for writing the heart of a LaTeX document between the `\begin{document}` and `\end{document} tags.
+The trouble comes when you extend LaTeX by importing packages via the documents preamble.
 
 ## Start with a simple manuscript format
 
-Initially, avoid using the complex template documents for journal articles that you find on the Overleaf website.
+Initially, avoid using the complex template documents for journal articles that you find on the Overleaf website or at publisher website.
 You can submit a plain [double-spaced manuscript document](https://github.com/MooersLab/manuscriptInLaTeX) on the first submission for any journal.
 Do not waste time on complex configurations for the first submission.
 You may have to send the manuscript to a different journal that requires a different template.
+It took me way too long to figure out this time-saving approach.
 
 ## Write one sentence per line
 
@@ -104,8 +105,8 @@ I find it easier to upload to the Overleaf project a new version of the global.b
 
 ## Consider using JabRef to manage a global.bib file
 
-Although versious text edtiors have packages for managing BibTeX libarary flles, I am using JabRef.
-[JabRef.app](https://www.jabref.org/) is a free, open-source Java-based stand-a-lone application for managing and searching your Bibtex library file.
+Although varsous text editors have packages for managing BibTeX library files, I am using JabRef.
+[JabRef.app](https://www.jabref.org/) is a free, open-source Java-based stand-a-lone application for managing and searching your BibTeX library file.
 JabRep has tools for finding duplicate and damaged entries.
 A JabRef plugin for web browsers is available.
 It will send the BibTeX for an article to JabRef and download, relabel, and store in a folder of your choice the associated PDF when the current webpage is for an article on a PubMed, Arvix, or some journal website.
@@ -118,7 +119,7 @@ The title is in Camel case or Pascal case.
 You quickly get used to reading CamelCase.
 
 When manually adding the BibTeX info to JabRef, I click the generate-key button in JabRef to autogenerate the citekey for an entry.
-I store all of the BibTeX entries in one global.bib file.
+I store all the BibTeX entries in one global.bib file.
 It has over 7100 entries and is automatically backed up.
 Its size is not an issue in JabRef, on Overleaf, or in Emacs.
 
@@ -201,6 +202,7 @@ LaTeX automatically handles the generation of the footnote number and its placem
 
 I can compile to PDF at a book with 1000 pages assemble from 400 individual documents, a table of contents, bibliography, and index in about a minute on Overleaf.com.
 The same operation takes several minutes on my local computer.
+A template for a daily logbook or diary for 2023 can be found [here](https://github.com/MooersLab/diary2023inLaTeX).
 
 ### main.tex for books
 
@@ -431,6 +433,7 @@ The beamer package is used to assemble slideshows via LaTeX.
 You can print notes with the slides for handouts.
 It is easy to recycle a beamer slideshow when making a new one.
 Code listings in beamer were tricky to code, but once you figure it out, you can use the beamer slide as a template.
+An example with code listings is found [here](https://github.com/MooersLab/slideshowTemplateLaTeX).
 
 You can add a section key above each frame environment in the beamer file.
 These will not interfere with the compiling of the beamer file, but they do appear as an outline in the lower left in Overleaf.
