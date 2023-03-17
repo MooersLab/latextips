@@ -18,7 +18,7 @@ You need some rudimentary programming skills and some patience.
 - The bulk of your prose does not require much in the way of LaTeX coding. The LaTeX markup is out of your way most of the time.
 - After you configure that preamble of the tex file to generate the features that you want in a particular kind of document, your work is done. You can reuse the preamble for the next several decades with only minor modifications as packages wax and wane.
 - You can also reuse LaTeX code in the form of code snippets. Snippets can enhance your productivity in ways that are still not possible in word processing documents thanks to tab triggers and mirrored tab stops.
-- Word processing documents were designed for writing business letters and not much less. For everything else, LaTeX is better. LaTeX is also good for business letter. Most academics use word processors for historic reasons.
+- Word processing documents were designed for writing business letters and not much less. For everything else, LaTeX is better. LaTeX is also good for business letters. Most academics use word processors for historic reasons.
 
 ## Why not the alternatives to LaTeX
 
