@@ -30,7 +30,7 @@ You need some rudimentary programming skills and some patience.
 - HTML is obviously great for making web-pages. You can use it to generate documents too. Knowledge of HTML is useful when you run into the limitations of GitHub Markdown.
 
 I have experience with all of the above.
-I use org-mode, markdown, plain text, and HTML every day and ReStructuredTexT once a year.
+I edit org-mode, markdown, plain text, and HTML every day and ReStructuredTexT once a year.
 
 ## Start with Overleaf
 
@@ -47,14 +47,15 @@ The [documentation about LaTeX](https://www.overleaf.com/learn) on the Overleaf 
 It is the first place you should go to when starting out.
 
 Each of your writing project will be accessible from your multiple devices.
-Each writing project is lists in projects page.
-Each writing project as a unique URL that you can use to directly access the writing project from an index.html file or an org file.
+Each writing project is listed on the landing page for your account.
+Each writing project has a unique URL that you can use to directly access the writing project from a browser bookmark, an index.html file, inside a IThoughtsX mindmap, or in an org file.
 
 Overleaf's built-in support for debugging is exquisite.
 Its support for debugging was one of the winning features for me.
 
 Overleaf compiles your document to PDF very quickly and painlessly.
-Inspect the output.aux for leads to the source of the errors when the error messages do not supply enough information.
+Occasionally, the error messages do not supply enough information.
+In this situation, inspect the output.aux for leads to the source of the errors 
 
 ## Use version control
 
@@ -73,11 +74,11 @@ The URL of the Overleaf writing project can be added to the browser toolbar for 
 ## Start with simple projects
 
 There is not that much in the way of coding to learn for writing the heart of a LaTeX document between the `\begin{document}` and `\end{document}` tags.
-The trouble comes when you extend LaTeX by importing packages via the documents preamble.
+The trouble comes when you extend LaTeX by importing packages via the document's preamble.
 
 ## Start with a simple manuscript format
 
-Initially, avoid using the complex template documents for journal articles that you find on the Overleaf website or at publisher website.
+Initially, avoid using the complex template documents for journal articles that you find on the Overleaf website or at the publisher website.
 You can submit a plain [double-spaced manuscript document](https://github.com/MooersLab/manuscriptInLaTeX) on the first submission for any journal.
 Do not waste time on complex configurations for the first submission.
 You may have to send the manuscript to a different journal that requires a different template.
@@ -105,7 +106,7 @@ I find it easier to upload to the Overleaf project a new version of the global.b
 
 ## Consider using JabRef to manage a global.bib file
 
-Although varsous text editors have packages for managing BibTeX library files, I am using JabRef.
+Although various text editors have packages for managing BibTeX library files, I am using JabRef.
 [JabRef.app](https://www.jabref.org/) is a free, open-source Java-based stand-a-lone application for managing and searching your BibTeX library file.
 JabRep has tools for finding duplicate and damaged entries.
 A JabRef plugin for web browsers is available.
@@ -134,20 +135,26 @@ Snippets and especially the [LaTeX-auto-acitvating-snippets package](https://git
 The Swedish mathematician Mark Olson provides an [awesome demo](https://www.youtube.com/watch?v=5cGsiRtBK9I) of these features in a short video.
 
 Overleaf is not the best environment for writing a lot of equations.
-If snippets in Emacs is too overwhelming, use the GUI-driven equation editor in [LyX](https://www.lyx.org/) or use the [LaTeXiT.app](https://www.chachatelier.fr/latexit/) to typeset the math equations and paste the assembled code into your LaTeX document.
+If snippets in Emacs is too overwhelming, use the GUI-driven equation editor in [LyX](https://www.lyx.org/) or use the free stand-a-lone [LaTeXiT.app](https://www.chachatelier.fr/latexit/) to typeset the math equations and paste the final code into your LaTeX document.
+LaTeXiT enables you to store the equations in a library.
+You can name the equations and add comments to them.
+The library supports folders for organizing the equations into groups.
+The library or a subset of it can be exported to a tex file.
+
+## Text editors for LaTeX
 
 Emacs has great support for writing in LaTeX.
-For me, Vim was the penultimate editor but Emacs as the ultimate one.
+For me, Vim was the penultimate editor, but Emacs is the ultimate one.
 There is no more advanced editor.
-It is at the end of the learning editor learning spiral.
+Emacs is at the end of the text editor learning spiral.
 
-## Know your math enivornments
+## Know your math environments
 
 One of the motivations for the development of TeX (which evolved into LaTeX) was to provided better support for typesetting math equations.
-There are a large number of [equation environments](https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics#Other_environments).
+There are numerous [equation environments](https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics#Other_environments).
 You should study them from time to time.
 The LaTeX Wikibook is a good [resource](https://en.wikibooks.org/wiki/LaTeX).
-Eventually, you should read these two books when time permits.
+Someday, I should read these two books.
 
 ```latex
 @Book{Gratzer2013MathIntoLaTeXASimpleGuideToTypesettingMathUsingAMSLaTeX,
@@ -167,16 +174,20 @@ Eventually, you should read these two books when time permits.
 }
 ```
 
+As you may know, MathJax renders in web pages equations written in LaTeX.
+You can left-click on the equation in the web page to see the tex code.
+You can then copy and paste this code into a tex file and then use this code as a template.  
+
 ## How to deal with URLs that bleed into the right margin
 
 Web addresses or URLs are frequently used to refer to resources on the World Wide Web.
 URLs are useful to display because they can evolve.
 Knowledge of an outdated URL can aid the discovery of the current URL.
-However, LaTeX does not know how to line wrap URL so they project into the right margin.
+However, LaTeX does not know how to line wrap URL, so they can project into the right margin if they are long.
 
 To address this problem, I put URLs in footnotes at the bottom of the page where they are out of the way.
-I use the the command `\footnote{\url{ }}`.
-I have put this in a yasnippet called *furl*.
+I use the command `\footnote{\url{ }}`.
+I have put this in a yasnippet snippet called *furl*.
 
 ```elisp
 # contributor: Blaine Mooers bmooers1@gmail.com
@@ -191,6 +202,7 @@ $0
 I copy the URL of interest to the clipboard.
 Then, at the end of the sentence, I enter *furl* and Control-o.
 I had mapped C-o to the yasnippet command for inserting a snippet; this is equivalent to using tab with a tab trigger.
+I did this to avoid conflicts with the use of TAB for tab completion elsewhere in Emacs.
 
 Then the code in the snippet appears.
 I paste the URL on the placeholder `http` and then hit tab.
@@ -200,15 +212,17 @@ LaTeX automatically handles the generation of the footnote number and its placem
 
 ## Multipart documents
 
-I can compile to PDF at a book with 1000 pages assemble from 400 individual documents, a table of contents, bibliography, and index in about a minute on Overleaf.com.
+I can compile to PDF at a book with 1000 pages assembled from 400 individual documents, a table of contents, bibliography, and index in about a minute on Overleaf.com.
 The same operation takes several minutes on my local computer.
 A template for a daily logbook or diary for 2023 can be found [here](https://github.com/MooersLab/diary2023inLaTeX).
+It has one tex file for each day of the year.
 
 ### main.tex for books
 
 Books are best assembled from multiple documents, with one document per chapter.
 This modularization eases the shuffling of the order of the chapters and the addition of new chapters.
-It is super easy to shift lines of text up and down in Emacs without using the mouse to make selections.
+It is super easy to shift lines of text up and down in Emacs.
+This is done without using the mouse to make selections and copying and pasting to change the order.
 
 Multipart documents require a *main.tex* file that I store at the top level of the project directory.
 I use it to source a *0AAAcontents.tex* file (which has the *input* or *include* commands for importing the individual files for each chapter and appendix) and a mybookPreamble.tex that contains my preamble for books.
@@ -218,18 +232,17 @@ I frequently edit the *0AAAcontents.tex* file as I add chapters and appendices.
 I named this file *0AAAcontents.tex* so that it appears at the top of the list of files in a `./Contents` folder where I store the chapter files and all other input files for the book.
 I store the figures, code listings, and appendices in subfolders of `./Contents` to reduce the clutter.
 I start the filename of chapters with `Ch` to distinguish them from other types of files.
-I do not include chapter numbers in the filenames of chapter because their absolute position shifts over time.
-I use the order of listing of the include commands in the *0AAAcontents.tex* file automatically  handle the numbering of the chapters.
+I do not include chapter number in the filename of the chapter because their absolute position shifts over time.
+I use the order of listing of the *\include* commands in the *0AAAcontents.tex* file to automatically handle the numbering of the chapters.
 
-
-The path to the main.tex file has to be included on the top line of each component file on Overleaf: `%!TEX root = ../main.tex` For Chapter files and `%!TEX root =  ../../main.tex` for the appendix files that are stored in the folder `./Contents/appendices`.
+The path to the main.tex file has to be included on the top line of each component file on Overleaf: `%!TEX root = ../main.tex` for Chapter files and `%!TEX root =  ../../main.tex` for the appendix files that are stored in the folder `./Contents/appendices`.
 The percent sign is the comment mark for LaTeX, so its presence in the first column of the first line is counter-intuitive.
 
 Similarly, four lines of code have to be at the end of each tex file for compiling by Emacs.
 The code below works with the default LaTeX mode.
-Alter the code when working with Auctex in Emacs.
+Alter the code when working with the Auctex package in Emacs rather than the built-in latex-mode package.
 Some other editors like TextMate require similar metadata to find the master main.tex file.
-The code at the top for the file for Overleaf and the code at the bottom of the file for Emacs can be present in the same file because they do not interfere with keep other.
+The code at the top for the file for Overleaf and the code at the bottom of the file for Emacs can be present in the same file because they do not interfere with each other.
 
 ```latex
 %%% Local Variables: ***
@@ -266,7 +279,7 @@ A useful template for a book chapter follows:
 ```
 
 This template is made into a yasnippet snippet for Emacs as shown below.
-The $1 tab trigger is mirrored so the whatever you enter at the first site is propagate to the other sites.
+The $1 tab trigger is mirrored so the whatever you enter at the first site is propagated to the other sites.
 This saves time.
 The snippet includes in a comment some basic Emacs commands that I use when in LaTeX mode.
 
@@ -291,7 +304,7 @@ The snippet includes in a comment some basic Emacs commands that I use when in L
 % C-1 to close current buffer.
 % C-c y i to open a pop-up menu for selecting a snippet.
 % C-c y for a hydra for yasnippets (Hydras are very cool! They save time. Learn about them.)
-% Fn F1 to invoke a hdyra for magit: mc for commit and mp for push. Yes, use git inside an Emacs buffer has opened a file under git version control.
+% Fn F1 to invoke a hdyra for magit: mc for commit and mp for push. Yes, use git inside an Emacs buffer that has opened a file under git version control.
 
 
 \section*{Introduction}
@@ -367,10 +380,10 @@ Older variants can be found elsewhere in my collection of GitHub repos.
 
 Labels are anchors for hyperlinks in the compiled PDF.
 They are often added to figures, tables, equations, and code listings, and then they are referred to from the text.
-When reusing code, it is too easy to propagate the same label and to fail to add the reference to the label.
-Each label must be unique, and each must be referenced.
+When reusing LaTeX code, it is too easy to propagate the same label and to fail to add the reference to the label.
+Each label must be unique and referenced.
 It is best to think of labels and references as being inseparable pairs.
-Otherwise, you will have to spend a lot of time dealing with labels that lack references during debugging.
+Otherwise, you will spend a lot of time dealing with labels that lack references during debugging.
 
 ## Add index keys as you write
 
@@ -380,20 +393,20 @@ However, they ease finding information in the document.
 It is best to add the index keys as you assemble the document so that you can use them as you work on the project.
 The keys serve as anchors to hyperlinks to them in the index.
 
-The search function is Acrobat Reader can lead too many hits and is poor substitute for using index keys.
+The search function is Acrobat Reader can lead too many hits and is a poor substitute for using index keys.
 
 
 ## Use keybindings
 
 Overleaf has standard CUA, Vim, and Emacs keybindings available.
-You set the keybinding via the menu in the upper lefthand corner of the Overleaf webpage.
-The keybindings can be selected on a per project basis.
+You set the keybinding via the menu in the upper left-hand corner of the Overleaf webpage for a particular project.
+The keybindings can be selected on a per-project basis.
 
 ## Image format
 
 Use PNG files or PDFs for image files.
 One drawback to Overleaf is that you cannot use postscript, EPS, or TIFF files.
-You can take a snapshot of images in these formats and save them as PNG files for uploading on Overleaf.
+You can take a snapshot of images in these formats and save them as PNG files for uploading to Overleaf.
 You can use PDFs, but you will not get a preview of the image file in Overleaf, unlike the case with PNG files.
 You have to wait for the document to be compiled by Overleaf to see an included image from a PDF.
 
@@ -403,10 +416,11 @@ LaTeX will autogenerate the table of contents, indices, bibliographies, glossari
 The last four lists require the use of captions that appear in the lists.
 Captions require the use of a subset of environments that are known as floats.
 I defined a *code* environment that encloses the minted environment for code listings and an *eqc* environment that does likewise for equations.
-These are custom float environments that allow the use of captions.
+These are custom float environments that allow the use of captions with code listings and math expressions.
 
 There may be computer RAM limits that block the generation of all of these indices.
-You may have to drop several of them.
+You may have to drop several of them or find more RAM.
+If you are using Overleaf, you can contact their tech support for help with this issue.
 
 ## Epigraphs
 
@@ -414,36 +428,75 @@ The epigraph package supports the insertion of epigraphs below the chapter title
 I store quotes in a master epigraphs.tex file in one project.
 I copy this file to other projects.
 
-It takes a lot of time to gather quotes.
+It takes a long time to gather good quotes.
 I gather quotes over the years and call upon them when needed.
-LaTeX automatically handles the formatting.
+LaTeX automatically handles the formatting of the epigraph.
 
 ## Tables
 
-Tables are a great strength of org-mode because they are trivial to assemble, and they even can do by row and by column computations like a spreadsheet.
+Tables are a great strength of Markdown and org-mode because they are trivial to assemble.
+In org-mode, tables can do by-row and by-column computations like a spreadsheet.
+
 In contrast, tables can be a pain to assemble in Emacs, unless you use a snippet for a table with a fixed number of rows and columns.
+My collection of [LaTeX snippets](https://github.com/MooersLab/snippet-latex-mode) has several templates for tables.
+There are also [web-tools](https://www.tablesgenerator.com/) that ease generating a template for a LaTeX table.
+
+LaTeX can handle wide tables in the landscape orientation and long tables that span multiple pages.
 
 You can spend a lot of time configuring tables.
-There are web-tools that ease generating a template for a table.
 Beware that the publisher may not support fancy tables, so it is best to keep the format of the table as simple as possible.
+
 
 ## Beamer package
 
 The beamer package is used to assemble slideshows via LaTeX.
 You can print notes with the slides for handouts.
 It is easy to recycle a beamer slideshow when making a new one.
-Code listings in beamer were tricky to code, but once you figure it out, you can use the beamer slide as a template.
-An example with code listings is found [here](https://github.com/MooersLab/slideshowTemplateLaTeX).
+In my experience, it is faster to assemble a slideshow in beamer than in PowerPoint because I can let LaTeX handle the positioning of figures and text.
+This reduces the tedious use of the computer mouse to resize and position images, titles, and text boxes.
+
+### code listings
+Code listings in beamer were tricky to do well in beamer slides because the minted environments cannot be used, but once you figure it out, you can use the beamer slide as a template.
+An example slideshow with code listings is found [here](https://github.com/MooersLab/slideshowTemplateLaTeX).
+
+### notes
+
+Each slide is in a frame environment in a beamer tex file.
+You can put whatever you want outside the frame environments.
+I add the note environment for recording notes.
+These notes can be printed out with the slides for handouts.
+
+### Outline of the talk
 
 You can add a section key above each frame environment in the beamer file.
-These will not interfere with the compiling of the beamer file, but they do appear as an outline in the lower left in Overleaf.
-This outline is useful during the assembly of the slideshow.
+These will not interfere with the compiling of the beamer file, but they do appear as an outline in the lower left corner of the webpage in Overleaf.
+This outline can be used to navigate quickly to a distant frame in the slideshow.
+This outline is useful for organizing the order of the slides during the assembly of the slideshow.
+
+### Hide the evidence that you are using beamer
 
 Slides for five of my six courses and all of my platform talks are in LaTeX.
 I hide the icons that typify a beamer slideshow.
 Most people think that I assembled my slides in PowerPoint.
 
+### Posters
+
 You can also assemble a poster in LaTeX by using one giant beamer slide.
+I do cheat by using a giant PowerPoint to assemble the images. 
+I export the PowerPoint slide as a PDF and import this into the top 4/5 of the beamer poster.
+I place all text below this image in the bottom 1/5 of the poster.
+
+Most posters have way too much text. 
+Nobody reads most of the text on most posters because there is too much text and because it is too hard to concentrate in the roar of a poster session.
+The text largely fails to ever serve its intended role.
+The results as images, plots, and tables are far more important.
+The poster is not a scientific paper; it is just a prop for a conversation.
+
+The scientific paper has been around for 500 years.
+The scientific poster has been around for 50 years.
+This format was generated in response to a sudden glut of graduate students in the late 1960s and early 1970s. 
+That glut subsided a long time ago.
+The sponsoring of poster sessions are now driven by tradition and expectation rather than a real need.
 
 ## Conclusions
 
