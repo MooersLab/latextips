@@ -457,16 +457,17 @@ It is easy to recycle a beamer slideshow when making a new one.
 In my experience, it is faster to assemble a slideshow in beamer than in PowerPoint because I can let LaTeX handle the positioning of figures and text.
 This reduces the tedious use of the computer mouse to resize and position images, titles, and text boxes.
 
-### code listings
+### Code listings in beamer
 Code listings in beamer were tricky to do well in beamer slides because the minted environments cannot be used, but once you figure it out, you can use the beamer slide as a template.
 An example slideshow with code listings is found [here](https://github.com/MooersLab/slideshowTemplateLaTeX).
 
-### notes
+### Notes for each slide
 
 Each slide is in a frame environment in a beamer tex file.
 You can put whatever you want outside the frame environments.
-I add the note environment for recording notes.
-These notes can be printed out with the slides for handouts.
+I add the note environment for writing out the text of my talk.
+This note environment can accommodate math expressions.
+These notes can be printed out with the slides scaled down for handouts.
 
 ### Outline of the talk
 
@@ -474,6 +475,12 @@ You can add a section key above each frame environment in the beamer file.
 These will not interfere with the compiling of the beamer file, but they do appear as an outline in the lower left corner of the webpage in Overleaf.
 This outline can be used to navigate quickly to a distant frame in the slideshow.
 This outline is useful for organizing the order of the slides during the assembly of the slideshow.
+
+### Movies are possible
+
+There are several latex packages that support the use of animations.
+Each frame of the animation has to be uploaded.
+This a pain because of the large number of files involved, so I avoid animations.
 
 ### Hide the evidence that you are using beamer
 
