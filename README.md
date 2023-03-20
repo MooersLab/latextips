@@ -8,7 +8,7 @@ You need some rudimentary programming skills and some patience.
 ## Why learn LaTeX?
 
 - LaTeX is available for free. It is painless to install with a package manager.
-- It has been around in its present form for 35 years, so it is likely to be around for another 35 years according to the [Lindy effect](https://wiki2.org/en/Lindy_effect).
+- It has been around in its present form for about 35 years, so it is likely to be around for another 35 years according to the [Lindy effect](https://wiki2.org/en/Lindy_effect).
 - The tex files are plain text and easy to put under version control.
 - The tex files are tiny compared to a word processing document containing the same information.
 - Long tex files and the resulting PDF files are easy to scroll quickly; this is not the case for word processing documents.
@@ -208,6 +208,8 @@ Then the code in the snippet appears.
 I paste the URL on the placeholder `http` and then hit tab.
 The cursor moves out of the braces and over the period to the start of the next sentence on a new line.
 LaTeX automatically handles the generation of the footnote number and its placement in the footer of the page.
+If the footnote bleeds into the right margin, you can remove the enclosed \url{} because with this removed, \footnote can line wrap the URL.
+Of course, in this state, the URL will not be a hyperlink to the website.
 
 
 ## Multipart documents
@@ -495,8 +497,7 @@ The poster is not a scientific paper; it is just a prop for a conversation.
 The scientific paper has been around for 500 years.
 The scientific poster has been around for 50 years.
 This format was generated in response to a sudden glut of graduate students in the late 1960s and early 1970s. 
-That glut subsided a long time ago.
-The sponsoring of poster sessions are now driven by tradition and expectation rather than a real need.
+The sponsoring of poster sessions are now driven by tradition and expectation rather than a real need in this day-and-age of giant convention centers and virtual meetings that have fewer spacer constraints.
 
 ## Conclusions
 
