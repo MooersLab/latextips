@@ -395,7 +395,7 @@ However, they ease finding information in the document.
 It is best to add the index keys as you assemble the document so that you can use them as you work on the project.
 The keys serve as anchors to hyperlinks to them in the index.
 
-The search function is Acrobat Reader can lead too many hits and is a poor substitute for using index keys.
+The search function is Acrobat Reader can lead to too many hits and is a poor substitute for using index keys.
 
 
 ## Use keybindings
@@ -409,7 +409,9 @@ The keybindings can be selected on a per-project basis.
 Use PNG files or PDFs for image files.
 One drawback to Overleaf is that you cannot use postscript, EPS, or TIFF files.
 You can take a snapshot of images in these formats and save them as PNG files for uploading to Overleaf.
-You can use PDFs, but you will not get a preview of the image file in Overleaf, unlike the case with PNG files.
+Or, you can convert all the TIFF files in a folder to PNG files with the command `mogrify -format png *-Copy.tif`. 
+The command line utility mogriy is installed with the imagemagick suite.
+You can use PDFs, but you will not get a preview of the image file on Overleaf, unlike the case with PNG files.
 You have to wait for the document to be compiled by Overleaf to see an included image from a PDF.
 
 ## Indices
