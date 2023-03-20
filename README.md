@@ -488,7 +488,7 @@ Slides for five of my six courses and all of my platform talks are in LaTeX.
 I hide the icons that typify a beamer slideshow.
 Most people think that I assembled my slides in PowerPoint.
 
-### Posters
+## Posters via beamer
 
 You can also assemble a poster in LaTeX by using one giant beamer slide.
 I do cheat by using a giant PowerPoint to assemble the images. 
@@ -504,7 +504,7 @@ The poster is not a scientific paper; it is just a prop for a conversation.
 The scientific paper has been around for 500 years.
 The scientific poster has been around for 50 years.
 This format was generated in response to a sudden glut of graduate students in the late 1960s and early 1970s. 
-The sponsoring of poster sessions are now driven by tradition and expectation rather than a real need in this day-and-age of giant convention centers and virtual meetings that have fewer spacer constraints.
+The sponsoring of poster sessions are now driven by tradition rather than a real need in this day-and-age of giant convention centers and virtual meetings that have few space constraints.
 
 ## Conclusions
 
