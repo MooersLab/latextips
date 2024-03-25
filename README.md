@@ -381,21 +381,21 @@ Older variants can be found elsewhere in my collection of GitHub repos.
 ## Reference all labels
 
 Labels are anchors for hyperlinks in the compiled PDF.
-They are often added to figures, tables, equations, and code listings, and then they are referred to from the text.
-When reusing LaTeX code, it is too easy to propagate the same label and to fail to add the reference to the label.
+They are often added to figures, tables, equations, and code listings and then referred to from the text.
+When reusing LaTeX code, it is too easy to propagate the same label and fail to add the reference to it.
 Each label must be unique and referenced.
 It is best to think of labels and references as being inseparable pairs.
-Otherwise, you will spend a lot of time dealing with labels that lack references during debugging.
+Otherwise, you will spend much time dealing with labels that lack references during debugging.
 
 ## Add index keys as you write
 
 The index entries are hyperlinked to the index keys in the final PDF.
 It is all too easy to forget to add index keys.
 However, they ease finding information in the document.
-It is best to add the index keys as you assemble the document so that you can use them as you work on the project.
+It is best to add the index keys as you assemble the document to use them as you work on the project.
 The keys serve as anchors to hyperlinks to them in the index.
 
-The search function is Acrobat Reader can lead to too many hits and is a poor substitute for using index keys.
+The Acrobat Reader search function can lead to too many hits and is a poor substitute for using index keys.
 
 
 ## Use keybindings
@@ -409,9 +409,9 @@ The keybindings can be selected on a per-project basis.
 Use PNG files or PDFs for image files.
 One drawback to Overleaf is that you cannot use postscript, EPS, or TIFF files.
 You can take a snapshot of images in these formats and save them as PNG files for uploading to Overleaf.
-Or, you can convert all the TIFF files in a folder to PNG files with the command `mogrify -format png *-Copy.tif`. 
-The command line utility mogriy is installed with the imagemagick suite.
-You can use PDFs, but you will not get a preview of the image file on Overleaf, unlike the case with PNG files.
+You can also convert all the TIFF files in a folder to PNG files with the command `mogrify—format png *-Copy.tif`. 
+The command line utility mogrify is installed with the imagemagick suite.
+You can use PDFs, but unlike with PNG files, you will not get a preview of the image file on Overleaf.
 You have to wait for the document to be compiled by Overleaf to see an included image from a PDF.
 
 ## Indices
@@ -420,9 +420,9 @@ LaTeX will autogenerate the table of contents, indices, bibliographies, glossari
 The last four lists require the use of captions that appear in the lists.
 Captions require the use of a subset of environments that are known as floats.
 I defined a *code* environment that encloses the minted environment for code listings and an *eqc* environment that does likewise for equations.
-These are custom float environments that allow the use of captions with code listings and math expressions.
+These custom float environments allow using captions with code listings and math expressions.
 
-There may be computer RAM limits that block the generation of all of these indices.
+Computer RAM limits may block the generation of all of these indices.
 You may have to drop several of them or find more RAM.
 If you are using Overleaf, you can contact their tech support for help with this issue.
 
@@ -439,16 +439,16 @@ LaTeX automatically handles the formatting of the epigraph.
 ## Tables
 
 Tables are a great strength of Markdown and org-mode because they are trivial to assemble.
-In org-mode, tables can do by-row and by-column computations like a spreadsheet.
+In org mode, tables can do by-row and by-column computations like a spreadsheet.
 
 In contrast, tables can be a pain to assemble in Emacs, unless you use a snippet for a table with a fixed number of rows and columns.
-My collection of [LaTeX snippets](https://github.com/MooersLab/snippet-latex-mode) has several templates for tables.
+My collection of [LaTeX snippets](https://github.com/MooersLab/snippet-latex-mode) has several table templates.
 There are also [web-tools](https://www.tablesgenerator.com/) that ease generating a template for a LaTeX table.
 
-LaTeX can handle wide tables in the landscape orientation and long tables that span multiple pages.
+LaTeX can handle wide landscape orientation tables and long tables span multiple pages.
 
 You can spend a lot of time configuring tables.
-Beware that the publisher may not support fancy tables, so it is best to keep the format of the table as simple as possible.
+Beware that the publisher may not support fancy tables, so it is best to keep the table's format as simple as possible.
 
 
 ## Beamer package
@@ -456,11 +456,11 @@ Beware that the publisher may not support fancy tables, so it is best to keep th
 The beamer package is used to assemble slideshows via LaTeX.
 You can print notes with the slides for handouts.
 It is easy to recycle a beamer slideshow when making a new one.
-In my experience, it is faster to assemble a slideshow in beamer than in PowerPoint because I can let LaTeX handle the positioning of figures and text.
+In my experience, assembling a slideshow in Beamer is faster than in PowerPoint because I can let LaTeX handle the positioning of figures and text.
 This reduces the tedious use of the computer mouse to resize and position images, titles, and text boxes.
 
-### Code listings in beamer
-Code listings in beamer were tricky to do well in beamer slides because the minted environments cannot be used, but once you figure it out, you can use the beamer slide as a template.
+### Code listings in beamer slideshows
+Code listings in beamer slides were tricky because the minted environments cannot be used directly, but once you figure it out, you can use the beamer slide as a template.
 An example slideshow with code listings is found [here](https://github.com/MooersLab/slideshowTemplateLaTeX).
 
 ### Notes for each slide
@@ -473,20 +473,20 @@ These notes can be printed out with the slides scaled down for handouts.
 
 ### Outline of the talk
 
-You can add a section key above each frame environment in the beamer file.
-These will not interfere with the compiling of the beamer file, but they do appear as an outline in the lower left corner of the webpage in Overleaf.
-This outline can be used to navigate quickly to a distant frame in the slideshow.
-This outline is useful for organizing the order of the slides during the assembly of the slideshow.
+Add a section key above each frame environment in the beamer file.
+These will not interfere with compiling the beamer file, but they appear as an outline in the lower left corner of the webpage in Overleaf.
+This outline can be navigated quickly to a distant frame in the slideshow.
+This outline is helpful in organizing the order of the slides during the assembly of the slideshow.
 
 ### Movies are possible
 
-There are several latex packages that support the use of animations.
+Several latex packages support the use of animations.
 Each frame of the animation has to be uploaded.
 This a pain because of the large number of files involved, so I avoid animations.
 
 ### Hide the evidence that you are using beamer
 
-Slides for five of my six courses and all of my platform talks are in LaTeX.
+Slides for five of my six courses and all my platform talks are in LaTeX.
 I hide the icons that typify a beamer slideshow.
 Most people think that I assembled my slides in PowerPoint.
 
