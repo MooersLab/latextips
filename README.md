@@ -25,9 +25,9 @@ You need some rudimentary programming skills and some patience.
 - [Plain text](https://wiki2.org/en/Plain_text) Why not? It's simple. It is the place to start when breaking free from the grip of word processors.
 - [Markdown](https://wiki2.org/en/Markdown) (and all of its variants: even R Markdown and [bookdown](https://bookdown.org/)) are great for simple documents. The rendered PDFs are beautiful. It is a great starter language for working with markup documents. However, it does not support the automatic generation of indices.
 - [ReStructuredTexT](https://wiki2.org/en/ReStructuredText) may be the next step up in sophistication, but it was designed to help Python developers document their code. It does a good job of meeting that need, but it is also quite limited as a result.
-- [Asciidoc](https://wiki2.org/en/AsciiDoc) is a step closer to LaTeX. However, it imports rendered PNG files of equations that do not look very sharp after inclusion in PDFs. It, too, fails to generate indices. You can create an index if you export the document to [DocBook](https://docbook.org/), which uses XML.
+- [Asciidoc](https://wiki2.org/en/AsciiDoc) is a step closer to LaTeX. However, it imports rendered PNG files of equations that look less sharp after inclusion in PDFs. It, too, fails to generate indices. If you export the document to [DocBook](https://docbook.org/), which uses XML, you can create an index.
 - [Org-mode](https://orgmode.org/) is a compelling markup language with added features for time and knowledge management. You can work in org mode all day. It is a very complete work environment. However, org files are translated to LaTeX upon export to PDF. Org recognizes most LaTeX markup. You must still learn some LaTeX to get the most out of document generation with org-mode. Here are some templates for a [generic manuscript](https://github.com/MooersLab/manuscriptInOrg) and a [writing log](https://github.com/MooersLab/writingLogTemplateInOrg) to keep track of your progress and plans for your writing project.
-- HTML is great for making web pages. You can also use it to generate documents. Knowledge of HTML is useful when you encounter the limitations of GitHub Markdown.
+- HTML is great for making web pages and generating documents. Knowing HTML is useful when you encounter the limitations of GitHub Markdown.
 
 I have experience with all of the above.
 I edit org-mode, markdown, plain text, and HTML daily and ReStructuredTexT once a year.
@@ -40,7 +40,7 @@ It is based in England.
 
 [Overleaf.com](https://www.overleaf.com/) provides free accounts.
 I used a free account for about a year.
-Then I wanted to do some collaborative writing and needed more disk space for larger book projects with bulky image files.
+Then I wanted to do collaborative writing and needed more disk space for larger book projects with bulky image files.
 I then bought a license.
 
 The [documentation about LaTeX](https://www.overleaf.com/learn) on the Overleaf website is excellent.
@@ -78,17 +78,17 @@ The trouble comes when you extend LaTeX by importing packages via the document's
 
 ## Start with a simple manuscript format
 
-Initially, avoid using the complex template documents for journal articles on the Overleaf website or the publisher's website.
+Initially, avoid using the complex template documents for journal articles on the Overleaf or the publisher's websites.
 You can submit a plain [double-spaced manuscript document](https://github.com/MooersLab/manuscriptInLaTeX) on the first submission for any journal.
-Save time on complex configurations for the first submission.
+You can save time on complex configurations for the first submission.
 You may have to send the manuscript to a different journal that requires a different template.
 It took me way too long to figure out this time-saving approach.
 
 ## Write one sentence per line
 
-This style of writing eases version control with git (Version control with git is impossible with Word documents).
+This writing style eases version control with git (Version control with git is impossible with Word documents).
 This format of writing also eases the shuffling of sentences during rewriting.
-Each of these two reasons alone is sufficient to use this unconventional format of writing.
+Each of these two reasons alone is sufficient to use this unconventional writing format.
 You quickly adapt to reading text in this format.
 This format might be easier to comprehend because each complete thought is on a separate line.
 
@@ -121,11 +121,11 @@ You quickly get used to reading CamelCase.
 
 When manually adding the BibTeX info to JabRef, I click the generate-key button in JabRef to autogenerate the citekey for an entry.
 I store all the BibTeX entries in one global.bib file.
-It has over 7100 entries and is automatically backed up.
+It has over 8400 entries and is automatically backed up.
 Its size is not an issue in JabRef, on Overleaf, or in Emacs.
 
 A similar automated PDF retrieval and relabeling system is available through Professor John Kitchin's [org-ref](https://github.com/jkitchin/org-ref) package for org-mode in Emacs.
-This functionality is not available in Emacs for LaTeX-mode, hence my workaround solution with JabRef.
+This functionality is unavailable in Emacs for LaTeX-mode, hence my workaround solution with JabRef.
 
 ## Writing math equations
 
@@ -183,7 +183,7 @@ You can then copy and paste this code into a tex file and then use this code as 
 Web addresses or URLs are frequently used to refer to resources on the World Wide Web.
 URLs are useful to display because they can evolve.
 Knowledge of an outdated URL can aid in the discovery of the current URL.
-However, LaTeX does not know how to line wrap URL, so they can project into the right margin if they are long.
+However, LaTeX does not know how to line-wrap URLs, so they can project into the right margin if they are long.
 
 To address this problem, I put URLs in footnotes at the bottom of the page where they are out of the way.
 I use the command `\footnote{\url{ }}`.
@@ -208,13 +208,13 @@ Then the code in the snippet appears.
 I paste the URL on the placeholder `http` and then hit tab.
 The cursor moves out of the braces and over the period to the start of the next sentence on a new line.
 LaTeX automatically handles the generation of the footnote number and its placement in the footer of the page.
-If the footnote bleeds into the right margin, you can remove the enclosed \url{} because with this removed, \footnote can line wrap the URL.
+If the footnote bleeds into the right margin, you can remove the enclosed \url{} because, with this removed, \footnote can line wrap the URL.
 Of course, in this state, the URL will not be a hyperlink to the website.
 
 
 ## Multipart documents
 
-I can compile to PDF at a book with 1000 pages assembled from 400 individual documents, a table of contents, bibliography, and index in about a minute on Overleaf.com.
+I can compile to PDF at a book with 1000 pages assembled from 400 individual documents, a table of contents, a bibliography, and an index in about a minute on Overleaf.com.
 The same operation takes several minutes on my local computer.
 A template for a daily logbook or diary for 2023 can be found [here](https://github.com/MooersLab/diary2023inLaTeX).
 It has one tex file for each day of the year.
@@ -234,17 +234,17 @@ I frequently edit the *0AAAcontents.tex* file as I add chapters and appendices.
 I named this file *0AAAcontents.tex* so that it appears at the top of the list of files in a `./Contents` folder where I store the chapter files and all other input files for the book.
 I store the figures, code listings, and appendices in subfolders of `./Contents` to reduce the clutter.
 I start the filename of chapters with `Ch` to distinguish them from other types of files.
-I do not include chapter number in the filename of the chapter because their absolute position shifts over time.
+I do not include chapter numbers in the filename of the chapter because their absolute position shifts over time.
 I use the order of listing of the *\include* commands in the *0AAAcontents.tex* file to automatically handle the numbering of the chapters.
 
 The path to the main.tex file has to be included on the top line of each component file on Overleaf: `%!TEX root = ../main.tex` for Chapter files and `%!TEX root =  ../../main.tex` for the appendix files that are stored in the folder `./Contents/appendices`.
-The percent sign is the comment mark for LaTeX, so its presence in the first column of the first line is counter-intuitive.
+The percent sign is LaTeX's comment mark, so its presence in the first column of the first line is counterintuitive.
 
 Similarly, four lines of code have to be at the end of each tex file for compiling by Emacs.
 The code below works with the default LaTeX mode.
 Alter the code when working with the Auctex package in Emacs rather than the built-in latex-mode package.
-Some other editors like TextMate require similar metadata to find the master main.tex file.
-The code at the top for the file for Overleaf and the code at the bottom of the file for Emacs can be present in the same file because they do not interfere with each other.
+Some other editors, like TextMate, require similar metadata to find the master main.tex file.
+The code at the top of the file for Overleaf and the code at the bottom of the file for Emacs can be present in the same file because they do not interfere with each other.
 
 ```latex
 %%% Local Variables: ***
@@ -281,7 +281,7 @@ A useful template for a book chapter follows:
 ```
 
 This template is made into a yasnippet snippet for Emacs as shown below.
-The $1 tab trigger is mirrored so the whatever you enter at the first site is propagated to the other sites.
+The $1 tab trigger is mirrored, so whatever you enter at the first site is propagated to the other sites.
 This saves time.
 The snippet includes in a comment some basic Emacs commands that I use when in LaTeX mode.
 
@@ -303,10 +303,10 @@ The snippet includes in a comment some basic Emacs commands that I use when in L
 % C-c w to display the word count (does not work with atomic-chrome)
 % C-c C-w to write out to different filename
 % C-x C-s to save.
-% C-1 to close current buffer.
+% C-1 to close the current buffer.
 % C-c y i to open a pop-up menu for selecting a snippet.
 % C-c y for a hydra for yasnippets (Hydras are very cool! They save time. Learn about them.)
-% Fn F1 to invoke a hdyra for magit: mc for commit and mp for push. Yes, use git inside an Emacs buffer that has opened a file under git version control.
+% Fn F1 to invoke a hydra for magic: mc for commit and mp for the push. Yes, use git inside an Emacs buffer that has opened a file under git version control.
 
 
 \section*{Introduction}
