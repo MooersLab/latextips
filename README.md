@@ -9,28 +9,28 @@ You need some rudimentary programming skills and some patience.
 
 - LaTeX is available for free. It is painless to install with a package manager.
 - It has been around in its present form for about 35 years, so it is likely to be around for another 35 years according to the [Lindy effect](https://wiki2.org/en/Lindy_effect).
-- The tex files are plain text and easy to put under version control.
+- The tex files are plain text and easily put under version control.
 - The tex files are tiny compared to a word processing document containing the same information.
 - Long tex files and the resulting PDF files are easy to scroll quickly; this is not the case for word processing documents.
 - The support for math type-setting is among the best.
-- The support for generating automatically tables of contents, bibliographies, indices, glossaries, and lists of figures, tables, code, and equations is very strong.
-- You have exquisite and precise control over the appearance of the output, largely via a vast library of packages. It is likely that what you want to do has been done before via a library that someone else developed.
-- The bulk of your prose does not require much in the way of LaTeX coding. The LaTeX markup is out of your way most of the time.
-- After you configure that preamble of the tex file to generate the features that you want in a particular kind of document, your work is done. You can reuse the preamble for the next several decades with only minor modifications as packages wax and wane.
-- You can also reuse LaTeX code in the form of code snippets. Snippets can enhance your productivity in ways that are still not possible in word processing documents thanks to tab triggers and mirrored tab stops.
-- Word processing documents were designed for writing business letters and not much less. For everything else, LaTeX is better. LaTeX is also good for business letters. Most academics use word processors for historic reasons.
+- The support for automatically generating tables of contents, bibliographies, indices, glossaries, and lists of figures, tables, code, and equations is robust.
+- You have exquisite and precise control over the output's appearance, largely via a vast library of packages. What you want to do has likely been done before via a library that someone else developed.
+- The LaTeX markup is out of your way most of the time.
+- After you configure that preamble of the tex file to generate the features you want in a particular document, your work is done. You can reuse the preamble for the next several decades with only minor modifications as packages wax and wane.
+- You can also reuse LaTeX code in the form of code snippets. Snippets can enhance your productivity in ways that are still not possible in word-processing documents, thanks to tab triggers and mirrored tab stops.
+
 
 ## Why not the alternatives to LaTeX
 
 - [Plain text](https://wiki2.org/en/Plain_text) Why not? It's simple. It is the place to start when breaking free from the grip of word processors.
 - [Markdown](https://wiki2.org/en/Markdown) (and all of its variants: even R Markdown and [bookdown](https://bookdown.org/)) are great for simple documents. The rendered PDFs are beautiful. It is a great starter language for working with markup documents. However, it does not support the automatic generation of indices.
-- [ReStructuredTexT](https://wiki2.org/en/ReStructuredText) may be the next step-up in terms of sophistication, but it was designed to meet the needs of Python developers to document their code. It does a good job of meeting that need, but it is also quite limited as a result.
-- [Asciidoc](https://wiki2.org/en/AsciiDoc) is a step closer to LaTeX. However, it imports rendered PNG files of equations that look horrible. It, too, fails to generate indices. You can generate an index if you export the document to [DocBook](https://docbook.org/), which uses XML.
-- [Org-mode](https://orgmode.org/) is a very powerful markup language with added features for time and knowledge management. You can work in org-mode all day. It is a very complete work environment. However, org files are translated to LaTeX upon export to PDF. Org recognizes most LaTeX markup. You still have to learn some LaTeX to get the most out of document generation with org-mode. Here are some templates for a [generic manuscript](https://github.com/MooersLab/manuscriptInOrg) and a [writing log](https://github.com/MooersLab/writingLogTemplateInOrg) to keep track of your progress and plans for your writing project.
-- HTML is obviously great for making web-pages. You can use it to generate documents too. Knowledge of HTML is useful when you run into the limitations of GitHub Markdown.
+- [ReStructuredTexT](https://wiki2.org/en/ReStructuredText) may be the next step up in sophistication, but it was designed to help Python developers document their code. It does a good job of meeting that need, but it is also quite limited as a result.
+- [Asciidoc](https://wiki2.org/en/AsciiDoc) is a step closer to LaTeX. However, it imports rendered PNG files of equations that do not look very sharp after inclusion in PDFs. It, too, fails to generate indices. You can create an index if you export the document to [DocBook](https://docbook.org/), which uses XML.
+- [Org-mode](https://orgmode.org/) is a compelling markup language with added features for time and knowledge management. You can work in org mode all day. It is a very complete work environment. However, org files are translated to LaTeX upon export to PDF. Org recognizes most LaTeX markup. You must still learn some LaTeX to get the most out of document generation with org-mode. Here are some templates for a [generic manuscript](https://github.com/MooersLab/manuscriptInOrg) and a [writing log](https://github.com/MooersLab/writingLogTemplateInOrg) to keep track of your progress and plans for your writing project.
+- HTML is great for making web pages. You can also use it to generate documents. Knowledge of HTML is useful when you encounter the limitations of GitHub Markdown.
 
 I have experience with all of the above.
-I edit org-mode, markdown, plain text, and HTML every day and ReStructuredTexT once a year.
+I edit org-mode, markdown, plain text, and HTML daily and ReStructuredTexT once a year.
 
 ## Start with Overleaf
 
@@ -40,13 +40,13 @@ It is based in England.
 
 [Overleaf.com](https://www.overleaf.com/) provides free accounts.
 I used a free account for about a year.
-Then I wanted to do some collaborative writing, and I needed more disk space for some larger book projects that had bulky image files.
+Then I wanted to do some collaborative writing and needed more disk space for larger book projects with bulky image files.
 I then bought a license.
 
 The [documentation about LaTeX](https://www.overleaf.com/learn) on the Overleaf website is excellent.
 It is the first place you should go to when starting out.
 
-Each of your writing project will be accessible from your multiple devices.
+Each of your writing projects will be accessible from your multiple devices.
 Each writing project is listed on the landing page for your account.
 Each writing project has a unique URL that you can use to directly access the writing project from a browser bookmark, an index.html file, inside a IThoughtsX mindmap, or in an org file.
 
@@ -54,14 +54,14 @@ Overleaf's built-in support for debugging is exquisite.
 Its support for debugging was one of the winning features for me.
 
 Overleaf compiles your document to PDF very quickly and painlessly.
-Occasionally, the error messages do not supply enough information.
+Occasionally, the error messages need to supply more information.
 In this situation, inspect the output.aux for leads to the source of the errors 
 
 ## Use version control
 
 Each Overleaf project has its own git repository.
 You can `git clone` your Overleaf project to your local computer.
-Take care not to get the two versions out of synch while writing or editing.
+Do not get the two versions out of synch while writing or editing.
 
 You can also `git clone` your project from Overleaf to GitHub, but GitHub will charge you for this privilege.
 If you have an academic account that is private, you can clone it from your computer to that account.
@@ -73,14 +73,14 @@ The URL of the Overleaf writing project can be added to the browser toolbar for 
 
 ## Start with simple projects
 
-There is not that much in the way of coding to learn for writing the heart of a LaTeX document between the `\begin{document}` and `\end{document}` tags.
+There is not much in the way of coding to learn for writing the heart of a LaTeX document between the `\begin{document}` and `\end{document}` tags.
 The trouble comes when you extend LaTeX by importing packages via the document's preamble.
 
 ## Start with a simple manuscript format
 
-Initially, avoid using the complex template documents for journal articles that you find on the Overleaf website or at the publisher website.
+Initially, avoid using the complex template documents for journal articles on the Overleaf website or the publisher's website.
 You can submit a plain [double-spaced manuscript document](https://github.com/MooersLab/manuscriptInLaTeX) on the first submission for any journal.
-Do not waste time on complex configurations for the first submission.
+Save time on complex configurations for the first submission.
 You may have to send the manuscript to a different journal that requires a different template.
 It took me way too long to figure out this time-saving approach.
 
@@ -101,21 +101,21 @@ You have to install it manually.
 You can synch your global.bin file to your Overleaf writing project by storing it on Google Drive or DropBox.
 I spent a lot of time on this and found that it was too complicated.
 One weakness is the need for continuous synching with Dropbox or Google Drive.
-I find it easier to upload to the Overleaf project a new version of the global.bib file as needed.
+I find it easier to upload a new version of the global.bib file to the Overleaf project as needed.
 
 
 ## Consider using JabRef to manage a global.bib file
 
 Although various text editors have packages for managing BibTeX library files, I am using JabRef.
-[JabRef.app](https://www.jabref.org/) is a free, open-source Java-based stand-a-lone application for managing and searching your BibTeX library file.
+[JabRef.app](https://www.jabref.org/) is a free, open-source Java-based stand-alone application for managing and searching your BibTeX library file.
 JabRep has tools for finding duplicate and damaged entries.
 A JabRef plugin for web browsers is available.
-It will send the BibTeX for an article to JabRef and download, relabel, and store in a folder of your choice the associated PDF when the current webpage is for an article on a PubMed, Arvix, or some journal website.
+It will send the BibTeX for an article to JabRef and download, relabel, and store the associated PDF in a folder of your choice when the current webpage is for an article on PubMed, Arvix, or a journal website.
 
 I have JabRef configured to relabel the PDF with the citekey.
 My citekey format is `FirstAuthorLastNameYearTitle'.
-The citekey has no dashes or underscores or whitespaces.
-The latter are a pain to work with on Unix-like systems.
+The citekey has no dashes, underscores, or whitespaces.
+The latter is a pain to work with on Unix-like systems.
 The title is in Camel case or Pascal case.
 You quickly get used to reading CamelCase.
 
@@ -130,12 +130,12 @@ This functionality is not available in Emacs for LaTeX-mode, hence my workaround
 ## Writing math equations
 
 Overleaf does not support code snippets.
-Emacs's [yasnippet](https://github.com/joaotavora/yasnippet) package eases creation of snippets.
+Emacs's [yasnippet](https://github.com/joaotavora/yasnippet) package eases the creation of snippets.
 Snippets and especially the [LaTeX-auto-acitvating-snippets package](https://github.com/tecosaur/LaTeX-auto-activating-snippets) can ease the writing of equations.
 The Swedish mathematician Mark Olson provides an [awesome demo](https://www.youtube.com/watch?v=5cGsiRtBK9I) of these features in a short video.
 
 Overleaf is not the best environment for writing a lot of equations.
-If snippets in Emacs is too overwhelming, use the GUI-driven equation editor in [LyX](https://www.lyx.org/) or use the free stand-a-lone [LaTeXiT.app](https://www.chachatelier.fr/latexit/) to typeset the math equations and paste the final code into your LaTeX document.
+If snippets in Emacs are too overwhelming, use the GUI-driven equation editor in [LyX](https://www.lyx.org/) or use the free stand-a-lone [LaTeXiT.app](https://www.chachatelier.fr/latexit/) to typeset the math equations and paste the final code into your LaTeX document.
 LaTeXiT enables you to store the equations in a library.
 You can name the equations and add comments to them.
 The library supports folders for organizing the equations into groups.
@@ -150,7 +150,7 @@ Emacs is at the end of the text editor learning spiral.
 
 ## Know your math environments
 
-One of the motivations for the development of TeX (which evolved into LaTeX) was to provided better support for typesetting math equations.
+One motivation for developing TeX (which evolved into LaTeX) was to provide better support for typesetting math equations.
 There are numerous [equation environments](https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics#Other_environments).
 You should study them from time to time.
 The LaTeX Wikibook is a good [resource](https://en.wikibooks.org/wiki/LaTeX).
@@ -182,7 +182,7 @@ You can then copy and paste this code into a tex file and then use this code as 
 
 Web addresses or URLs are frequently used to refer to resources on the World Wide Web.
 URLs are useful to display because they can evolve.
-Knowledge of an outdated URL can aid the discovery of the current URL.
+Knowledge of an outdated URL can aid in the discovery of the current URL.
 However, LaTeX does not know how to line wrap URL, so they can project into the right margin if they are long.
 
 To address this problem, I put URLs in footnotes at the bottom of the page where they are out of the way.
