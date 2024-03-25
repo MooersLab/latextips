@@ -500,17 +500,17 @@ I place all text below this image in the bottom 1/5 of the poster.
 Most posters have way too much text. 
 Nobody reads most of the text on most posters because there is too much text and because it is too hard to concentrate in the roar of a poster session.
 The text largely fails to ever serve its intended role.
-The results as images, plots, and tables are far more important.
+The results, such as images, plots, and tables, are far more important.
 The poster is not a scientific paper; it is just a prop for a conversation.
 
 The scientific paper has been around for 500 years.
 The scientific poster has been around for 50 years.
-This format was generated in response to a sudden glut of graduate students in the late 1960s and early 1970s. 
-The sponsoring of poster sessions are now driven by tradition rather than a real need in this day-and-age of giant convention centers and virtual meetings that have few space constraints.
+This role of poster sessions was generated in response to a sudden glut of graduate students in the late 1960s and early 1970s in the United States. 
+The sponsoring of poster sessions is now driven by tradition rather than a real need in this day and age of giant convention centers and virtual meetings that have few space constraints.
 
 ## Conclusions
 
-LaTeX meets all of my writing needs.
+LaTeX meets most of my writing needs.
 Furthermore, LaTeX supports my pursuit of the [FAIR](https://www.go-fair.org/fair-principles/) principles.
 I retain word processors on my computer to collaborate with colleagues who do not know LaTeX.
 
