@@ -1,3 +1,7 @@
+![Version](https://img.shields.io/static/v1?label=latextips&message=0.1&color=brightcolor)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+
 # Tips for greater productivity with LaTeX
 
 This is a list of insights gleaned from a decade of using LaTeX.
@@ -8,7 +12,7 @@ You need some rudimentary programming skills and some patience.
 ## Why learn LaTeX?
 
 - LaTeX is available for free. It is painless to install with a package manager.
-- It has been around in its present form for about 35 years, so it is likely to be around for another 35 years according to the [Lindy effect](https://wiki2.org/en/Lindy_effect).
+- It has been around in its present form for about 35 years, so it will likely be around for another 35 years according to the [Lindy effect](https://wiki2.org/en/Lindy_effect).
 - The tex files are plain text and easily put under version control.
 - The tex files are tiny compared to a word processing document containing the same information.
 - Long tex files and the resulting PDF files are easy to scroll quickly; this is not the case for word processing documents.
@@ -17,14 +21,14 @@ You need some rudimentary programming skills and some patience.
 - You have exquisite and precise control over the output's appearance, largely via a vast library of packages. What you want to do has likely been done before via a library that someone else developed.
 - The LaTeX markup is out of your way most of the time.
 - After you configure that preamble of the tex file to generate the features you want in a particular document, your work is done. You can reuse the preamble for the next several decades with only minor modifications as packages wax and wane.
-- You can also reuse LaTeX code in the form of code snippets. Snippets can enhance your productivity in ways that are still not possible in word-processing documents, thanks to tab triggers and mirrored tab stops.
+- You can also reuse LaTeX code in the form of code snippets. Thanks to tab triggers and mirrored tab stops, snippets can enhance your productivity in ways that are still not possible in word-processing documents.
 
 
 ## Why not the alternatives to LaTeX
 
 - [Plain text](https://wiki2.org/en/Plain_text) Why not? It's simple. It is the place to start when breaking free from the grip of word processors.
 - [Markdown](https://wiki2.org/en/Markdown) (and all of its variants: even R Markdown and [bookdown](https://bookdown.org/)) are great for simple documents. The rendered PDFs are beautiful. It is a great starter language for working with markup documents. However, it does not support the automatic generation of indices.
-- [ReStructuredTexT](https://wiki2.org/en/ReStructuredText) may be the next step up in sophistication, but it was designed to help Python developers document their code. It does a good job of meeting that need, but it is also quite limited as a result.
+- [ReStructuredTexT](https://wiki2.org/en/ReStructuredText) may be the next step up in sophistication, but it was designed to help Python developers document their code. It does a good job of meeting that need, but it is also quite limited.
 - [Asciidoc](https://wiki2.org/en/AsciiDoc) is a step closer to LaTeX. However, it imports rendered PNG files of equations that look less sharp after inclusion in PDFs. It, too, fails to generate indices. If you export the document to [DocBook](https://docbook.org/), which uses XML, you can create an index.
 - [Org-mode](https://orgmode.org/) is a compelling markup language with added features for time and knowledge management. You can work in org mode all day. It is a very complete work environment. However, org files are translated to LaTeX upon export to PDF. Org recognizes most LaTeX markup. You must still learn some LaTeX to get the most out of document generation with org-mode. Here are some templates for a [generic manuscript](https://github.com/MooersLab/manuscriptInOrg) and a [writing log](https://github.com/MooersLab/writingLogTemplateInOrg) to keep track of your progress and plans for your writing project.
 - HTML is great for making web pages and generating documents. Knowing HTML is useful when you encounter the limitations of GitHub Markdown.
@@ -48,7 +52,7 @@ It is the first place you should go to when starting out.
 
 Each of your writing projects will be accessible from your multiple devices.
 Each writing project is listed on the landing page for your account.
-Each writing project has a unique URL that you can use to directly access the writing project from a browser bookmark, an index.html file, inside a IThoughtsX mindmap, or in an org file.
+Each writing project has a unique URL that you can use to directly access the writing project from a browser bookmark, an index.html file, inside an IThoughtsX mindmap, or in an org file.
 
 Overleaf's built-in support for debugging is exquisite.
 Its support for debugging was one of the winning features for me.
@@ -64,7 +68,7 @@ You can `git clone` your Overleaf project to your local computer.
 Do not get the two versions out of synch while writing or editing.
 
 You can also `git clone` your project from Overleaf to GitHub, but GitHub will charge you for this privilege.
-If you have an academic account that is private, you can clone it from your computer to that account.
+If you have a private academic account, you can clone it from your computer to that account.
 
 
 ## Use the browser bookmark bar to fast access
@@ -78,7 +82,7 @@ The trouble comes when you extend LaTeX by importing packages via the document's
 
 ## Start with a simple manuscript format
 
-Initially, avoid using the complex template documents for journal articles on the Overleaf or the publisher's websites.
+Initially, avoid using the complex template documents for journal articles on Overleaf or the publisher's websites.
 You can submit a plain [double-spaced manuscript document](https://github.com/MooersLab/manuscriptInLaTeX) on the first submission for any journal.
 You can save time on complex configurations for the first submission.
 You may have to send the manuscript to a different journal that requires a different template.
@@ -88,7 +92,7 @@ It took me way too long to figure out this time-saving approach.
 
 This writing style eases version control with git (Version control with git is impossible with Word documents).
 This format of writing also eases the shuffling of sentences during rewriting.
-Each of these two reasons alone is sufficient to use this unconventional writing format.
+These two reasons alone are sufficient to use this unconventional writing format.
 You quickly adapt to reading text in this format.
 This format might be easier to comprehend because each complete thought is on a separate line.
 
@@ -99,7 +103,7 @@ You have to install it manually.
 ## Global.bib: skip the synching
 
 You can synch your global.bin file to your Overleaf writing project by storing it on Google Drive or DropBox.
-I spent a lot of time on this and found that it was too complicated.
+I spent a lot of time on this and found it to be too complicated for my workflow.
 One weakness is the need for continuous synching with Dropbox or Google Drive.
 I find it easier to upload a new version of the global.bib file to the Overleaf project as needed.
 
@@ -122,7 +126,7 @@ You quickly get used to reading CamelCase.
 When manually adding the BibTeX info to JabRef, I click the generate-key button in JabRef to autogenerate the citekey for an entry.
 I store all the BibTeX entries in one global.bib file.
 It has over 8400 entries and is automatically backed up.
-Its size is not an issue in JabRef, on Overleaf, or in Emacs.
+Its size is not an issue in JabRef, Overleaf, or Emacs.
 
 A similar automated PDF retrieval and relabeling system is available through Professor John Kitchin's [org-ref](https://github.com/jkitchin/org-ref) package for org-mode in Emacs.
 This functionality is unavailable in Emacs for LaTeX-mode, hence my workaround solution with JabRef.
@@ -201,11 +205,11 @@ $0
 
 I copy the URL of interest to the clipboard.
 Then, at the end of the sentence, I enter *furl* and Control-o.
-I had mapped C-o to the yasnippet command for inserting a snippet; this is equivalent to using tab with a tab trigger.
+I had mapped C-o to the yasnippet command for inserting a snippet; this is equivalent to using a tab with a tab trigger.
 I did this to avoid conflicts with the use of TAB for tab completion elsewhere in Emacs.
 
 Then the code in the snippet appears.
-I paste the URL on the placeholder `http` and then hit tab.
+I paste the URL on the placeholder `http` and then hit the tab.
 The cursor moves out of the braces and over the period to the start of the next sentence on a new line.
 LaTeX automatically handles the generation of the footnote number and its placement in the footer of the page.
 If the footnote bleeds into the right margin, you can remove the enclosed \url{} because, with this removed, \footnote can line wrap the URL.
@@ -235,7 +239,7 @@ I named this file *0AAAcontents.tex* so that it appears at the top of the list o
 I store the figures, code listings, and appendices in subfolders of `./Contents` to reduce the clutter.
 I start the filename of chapters with `Ch` to distinguish them from other types of files.
 I do not include chapter numbers in the filename of the chapter because their absolute position shifts over time.
-I use the order of listing of the *\include* commands in the *0AAAcontents.tex* file to automatically handle the numbering of the chapters.
+I use the order of listing the *\include* commands in the *0AAAcontents.tex* file to automatically handle the numbering of the chapters.
 
 The path to the main.tex file has to be included on the top line of each component file on Overleaf: `%!TEX root = ../main.tex` for Chapter files and `%!TEX root =  ../../main.tex` for the appendix files that are stored in the folder `./Contents/appendices`.
 The percent sign is LaTeX's comment mark, so its presence in the first column of the first line is counterintuitive.
@@ -328,7 +332,7 @@ $3
 ```
 
 Magit is the Emacs package that enables running git from inside Emacs.
-The magit hydra came from this emacs.stackexchange [post](https://emacs.stackexchange.com/questions/21597/using-magit-for-the-most-basic-add-commit-push).
+The magit hydra came from this post on Emacs stackexchange [post](https://emacs.stackexchange.com/questions/21597/using-magit-for-the-most-basic-add-commit-push).
 I have pasted it below for completeness.
 Hydras display a temporary menu to guide your selection of commands.
 I regret not learning about them sooner.
@@ -391,7 +395,7 @@ Otherwise, you will spend much time dealing with labels that lack references dur
 
 The index entries are hyperlinked to the index keys in the final PDF.
 It is all too easy to forget to add index keys.
-However, they ease finding information in the document.
+However, they easily find information in the document.
 It is best to add the index keys as you assemble the document to use them as you work on the project.
 The keys serve as anchors to hyperlinks to them in the index.
 
