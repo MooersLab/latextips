@@ -1,13 +1,12 @@
-![Version](https://img.shields.io/static/v1?label=latextips&message=0.1&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=latextips&message=0.2&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
 # Tips for greater productivity with LaTeX
 
 This is a list of insights gleaned from a decade of using LaTeX.
-LaTeX is not for most people.
-You have to be able to debug the source file, and you have to be self-reliant.
-You need some rudimentary programming skills and some patience.
+LaTeX is only for people who are patient, self-reliant, and willing to debug their tex file.
+
 
 ## Why learn LaTeX?
 
@@ -18,10 +17,10 @@ You need some rudimentary programming skills and some patience.
 - Long tex files and the resulting PDF files are easy to scroll quickly; this is not the case for word processing documents.
 - The support for math type-setting is among the best.
 - The support for automatically generating tables of contents, bibliographies, indices, glossaries, and lists of figures, tables, code, and equations is robust.
-- You have exquisite and precise control over the output's appearance, largely via a vast library of packages. What you want to do has likely been done before via a library that someone else developed.
+- You have exquisite and precise control over the output's appearance, largely through a vast library of packages. What you want to do has likely been done before, using a library that someone else developed.
 - The LaTeX markup is out of your way most of the time.
 - After you configure that preamble of the tex file to generate the features you want in a particular document, your work is done. You can reuse the preamble for the next several decades with only minor modifications as packages wax and wane.
-- You can also reuse LaTeX code in the form of code snippets. Thanks to tab triggers and mirrored tab stops, snippets can enhance your productivity in ways that are still not possible in word-processing documents.
+- You can also reuse LaTeX code in the form of code snippets. Thanks to tab triggers and mirrored tab stops, snippets can enhance your productivity in ways that are still impossible in word-processing documents.
 
 
 ## Why not the alternatives to LaTeX
@@ -34,7 +33,7 @@ You need some rudimentary programming skills and some patience.
 - HTML is great for making web pages and generating documents. Knowing HTML is useful when you encounter the limitations of GitHub Markdown.
 
 I have experience with all of the above.
-I edit org-mode, markdown, plain text, and HTML daily and ReStructuredTexT once a year.
+I edit org-mode, markdown, plain text, and HTML almost daily and ReStructuredTexT once a year.
 
 ## Start with Overleaf
 
@@ -501,10 +500,10 @@ I do cheat by using a giant PowerPoint to assemble the images.
 I export the PowerPoint slide as a PDF and import this into the top 4/5 of the beamer poster.
 I place all text below this image in the bottom 1/5 of the poster.
 
-Most posters have way too much text. 
-Nobody reads most of the text on most posters because there is too much text and because it is too hard to concentrate in the roar of a poster session.
+Most posters have too much text. 
+Nobody reads most of the text on most posters because there is too much text and it is too hard to concentrate in the roar of a poster session.
 The text largely fails to ever serve its intended role.
-The results, such as images, plots, and tables, are far more important.
+The results, such as images, plots, and tables, are more important.
 The poster is not a scientific paper; it is just a prop for a conversation.
 
 The scientific paper has been around for 500 years.
@@ -518,3 +517,30 @@ LaTeX meets most of my writing needs.
 Furthermore, LaTeX supports my pursuit of the [FAIR](https://www.go-fair.org/fair-principles/) principles.
 I retain word processors on my computer to collaborate with colleagues who do not know LaTeX.
 
+## Related projects of possible interest
+
+- [LaTeX manuscript template](https://github.com/MooersLab/manuscriptInLaTeX/edit/main/README.md)
+- [Writing log template](https://github.com/MooersLab/writingLogTemplate)
+- [Slideshow Template](https://github.com/MooersLab/slideshowTemplateLaTeX)
+- [Diary for 2022 in LaTeX](https://github.com/MooersLab/diary2022inLaTeX)
+- [Diary for 2023 in LaTeX](https://github.com/MooersLab/diary2023inLaTeX)
+- [latex-emacs profile](https://github.com/MooersLab/latex-emacs)
+- [snippets for latex-mode in Emacs](https://github.com/MooersLab/snippet-latex-mode)
+- [Quizzes about Emacs to improve recall of keybindings](https://github.com/MooersLab/qemacs)
+- [Slides from talk about LaTeX in Emacs at the Berlin Emacs Meetup Aug 31, 2022](https://github.com/MooersLab/BerlinEmacsAugust2022)
+- [Slides from talk about GhostText, Data Science Workshop, July 2022](https://github.com/MooersLab/DSW22ghosttext)
+- [Video link to talk about GhostText, Data Science Workshop, July 2022](https://mediasite.ouhsc.edu/Mediasite/Channel/python/watch/4da0872f028c4255ae12935655e911321d)
+- [The writer's law](https://github.com/MooersLab/thewriterslaw)
+
+## Version History
+
+|Version      | Changes                                               | Date            |
+|:-----------:|:-----------------------------------------------------:|:---------------:|
+| Version 0.2 | Added Update table to README.md                       | 2024 April 8    |
+
+## Sources of Funding
+
+- NIH: R01 CA242845
+- NIH: R01 AI088011
+- NIH: P30 CA225520 (PI: R. Mannel)
+- NIH P20GM103640 and P30GM145423 (PI: A. West
